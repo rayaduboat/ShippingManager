@@ -1,0 +1,158 @@
+﻿@*@model IEnumerable<FinanceManager.Model.Models.RecipientsCreateModel>*@
+@model FinanceManager.Model.Models.RecipientsCreateModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="text-center" style="font-weight:700">All Recipients</h3>
+<hr />
+
+<p>
+    <a class="btn btn-primary" asp-action="MainRecipientsPanel">Main Recipients Window</a>
+</p>
+<p style="color:red;font-size:12px;font-weight:600;">@Model.RecMsg</p>
+<form method="post" asp-action="SenderRecipients" asp-controller="Recipients">
+    <div class="form-group row">
+        <label class="col-form-label col-sm-2">Select Sender</label>
+        <div class="col-sm-3">
+            <select id="selFullName" asp-items="@Model.RecipientSender" name="selFullName" class="form-control" style="font-weight:600;background-color:moccasin;border: solid;"></select>
+        </div>
+        <div class="col-sm-2">
+            <input type="submit" id="linkSendersRecipients" class="btn-primary" value="Load Recipients" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" id="SearchRecipients" class="form-control" value="" placeholder="enter search text" style="font-weight:600;background-color:moccasin;border: solid;" />
+        </div>
+    </div>
+</form>
+<p id="selectedSender" style="color:red;font-weight:700;font-size:14px;text-align:center;"></p>
+<table id="mainTable" class="table w3-table" border="1">
+    <thead style="background-color:steelblue;text-align:center;color:white">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressLineOne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostTown)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone)
+            </th>
+            <th style="text-align:center">Action</th>
+        </tr>
+    </thead>
+    <tbody id="mainTablebody">
+        @if (Model.AllRecipients != null)
+        {
+            @foreach (var item in Model.AllRecipients)
+            {
+                <tr style="text-align:center;font-size:12px;background-color:snow">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddressLineOne)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PostTown)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telephone)
+                    </td>
+                    <td style="text-align:center">
+                        <input type="hidden" name="SenderId" value="@item.SenderId" />
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.RecipientId">Edit</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.RecipientId">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
+<div>
+    @section Scripts {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                ApplyTableFilters([
+                    {
+                        textboxID: 'SearchRecipients',
+                        tbodyID: 'mainTablebody'
+                    }//,
+                    //{
+                    //    textboxID: 'textboxRelationSearch',
+                    //    tbodyID: 'tbodyrelationtype'
+                    //},
+                    //{
+                    //    textboxID: 'textboxsearchcellgroups',
+                    //    tbodyID: 'tbodycellgroups'
+                    //},
+                    //{
+                    //    textboxID: 'textboxAdminName',
+                    //    tbodyID: 'tbodyAccountMembers'
+                    //},
+                    //{
+                    //    textboxID: 'textboxMassupdatesearch',
+                    //    tbodyID: 'tbodyMassUpdate'
+                    //},
+                    //{
+                    //    textboxID: 'textsearchAttendance',
+                    //    tbodyID: 'tbodyAttendanceHistory'
+                    //},
+                    //{
+                    //    textboxID: 'textsearchContribution',
+                    //    tbodyID: 'tbodyContributionHistory'
+                    //},
+                    //{
+                    //    textboxID: 'textsearchAppointment',
+                    //    tbodyID: 'tbodyAppointmentHistory'
+                    //},
+                ]
+                );
+
+                $('#selFullName').on("change", function () {
+                    var maintablebody = document.getElementById('mainTablebody');
+                    $('#mainTablebody').empty();
+                    var e = document.getElementById("selFullName");
+                    var data = e.options[e.selectedIndex].text;
+                    $('#selectedSender').val(data);
+                });
+
+                function TableFilter (textboxID, tbodyID) {
+                    try {
+                        $("#" + textboxID).on("keyup", function () {
+                            var value = $(this).val().toLowerCase();
+                            $("#" + tbodyID + " tr").filter(function () {
+                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                            });
+                        });
+                    } catch (e) {
+
+                    }
+                }
+         function ApplyTableFilters (searchBox) {
+            //if (typeof searchBox != 'undefined') {
+            for (var i = 0; i < searchBox.length; i++) {
+                try {
+                    this.TableFilter(searchBox[i].textboxID, searchBox[i].tbodyID);
+                } catch (e) {
+
+                }
+            }
+        //}
+    }
+
+  });
+        </script>
+    }
+
+</div>

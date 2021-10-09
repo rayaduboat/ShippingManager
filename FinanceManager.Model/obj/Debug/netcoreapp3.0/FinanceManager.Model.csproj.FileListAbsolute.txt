@@ -1,0 +1,64 @@
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.deps.json
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.dll
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfoInputs.cache
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfo.cs
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.dll
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.json
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.dev.json
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.genruntimeconfig.cache
+C:\RABworld\RabantSolutions\FinanceManager\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csproj.CoreCompileInputs.cache
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.deps.json
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.json
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.dev.json
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.dll
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csprojAssemblyReference.cache
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csproj.CoreCompileInputs.cache
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfoInputs.cache
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfo.cs
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.dll
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+C:\RABworld\RabantSolutions\RabantShippingManager\GyabsHelen Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.genruntimeconfig.cache
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.deps.json
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.json
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.dev.json
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.dll
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csproj.CoreCompileInputs.cache
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfoInputs.cache
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfo.cs
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.dll
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+C:\RABworld\RabantSolutions\RabantShippingManager\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.genruntimeconfig.cache
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.deps.json
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.json
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.dev.json
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.dll
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfoInputs.cache
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfo.cs
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csproj.CoreCompileInputs.cache
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.dll
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.genruntimeconfig.cache
+D:\RABWorld\Personal\Software Development\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csprojAssemblyReference.cache
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.deps.json
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.json
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.runtimeconfig.dev.json
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.dll
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\bin\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfoInputs.cache
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfo.cs
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csproj.CoreCompileInputs.cache
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.dll
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.genruntimeconfig.cache
+H:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csprojAssemblyReference.cache
+H:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfoInputs.cache
+H:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.AssemblyInfo.cs
+H:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csproj.CoreCompileInputs.cache
+H:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.dll
+H:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.pdb
+D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\FinanceManager.Model\obj\Debug\netcoreapp3.0\FinanceManager.Model.csprojAssemblyReference.cache

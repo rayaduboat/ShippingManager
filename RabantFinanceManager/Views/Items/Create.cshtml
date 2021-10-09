@@ -1,0 +1,117 @@
+﻿@model FinanceManager.Model.Models.Items
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<h1>Create</h1>
+
+    <h4>Items</h4>*@
+<hr />
+<div class="container">
+    <div class="panel-group">
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="text-align:center;font-weight:600">Select your Reicipient and Items to Ship here</div>
+            <div class="panel-body FormDesign">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group row">
+                        <label asp-for="Name" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input asp-for="Name" class="form-control textBoxFormat" />
+                        </div>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="Model" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input asp-for="Model" class="form-control textBoxFormat" />
+                        </div>
+                        <span asp-validation-for="Model" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="Description" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input asp-for="Description" class="form-control textBoxFormat" />
+                        </div>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                            <label asp-for="Colour" class="control-label"></label>
+                            <input asp-for="Colour" class="form-control" />
+                            <span asp-validation-for="Colour" class="text-danger"></span>
+                        </div>*@
+
+                    <div class="form-group row">
+                        <label asp-for="UnitCost" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input asp-for="UnitCost" class="form-control textBoxFormat" />
+                        </div>
+                        <span asp-validation-for="UnitCost" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="Type" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input asp-for="Type" class="form-control textBoxFormat" />
+                        </div>
+                        <span asp-validation-for="Type" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="Brand" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input asp-for="Brand" class="form-control textBoxFormat" />
+                        </div>
+                        <span asp-validation-for="Brand" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="Specifications" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input asp-for="Specifications" class="form-control textBoxFormat" />
+                        </div>
+                        <span asp-validation-for="Specifications" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                            <label asp-for="Condition" class="control-label"></label>
+                            <input asp-for="Condition" class="form-control" />
+                            <span asp-validation-for="Condition" class="text-danger"></span>
+                        </div>*@
+                    @*<div class="form-group">
+                            <label asp-for="Make" class="control-label"></label>
+                            <input asp-for="Make" class="form-control" />
+                            <span asp-validation-for="Make" class="text-danger"></span>
+                        </div>*@
+                    <div class="form-group row">
+                        <label asp-for="Make" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input asp-for="Make" class="form-control textBoxFormat" />
+                        </div>
+                        <span asp-validation-for="Make" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>*@
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <input type="submit" value="Add Item" class="btn-primary" />
+                            <a asp-action="MainItemsPanel" asp-controller="Items" class="btn btn-primary">Exit</a>
+                            @*<button id="btnAddItem" class="form-control btn-primary btnFormat" type="button"
+                onclick="{ new $pac.TripManagement.ClientOrder().Checkout('BatchId','sender_Id','ListBoxRecipientID option:selected','txtRefNum','itemTable>tbody>tr','orderTel','orderPostcode') }">
+                Checkout
+        </button>*@
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+@*<div>
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+

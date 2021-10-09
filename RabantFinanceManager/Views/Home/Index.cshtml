@@ -1,0 +1,359 @@
+﻿@*@model IEnumerable<FinanceManager.Model.Models.TripEditModel>*@
+@model FinanceManager.Model.Models.TripEditModel
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Home Page";
+    //Layout = "~\Views\Shared\_Layout";
+}
+
+
+<div>
+    <span id="callOrderItemsModal" data-toggle="modal" data-target="#myItemsModal"></span>
+</div>
+<div style="text-align:center;">
+    @*<input id="userEmail" type="hidden" value="@User.Identity.Name" />*@
+    @if (User.Identity.Name == "sysadmin@rabcomsolutions.com")
+    {
+        // @Html.HiddenFor()
+
+        <div class="text-center">
+            <h1 class="jumbotron" style="background-color:darkblue;color:white;color:yellow;text-align:center;font-weight:600;">SYSTEM ADMINISTRATOR</h1>
+        </div>
+        <a class="btn btn-primary" asp-action="MainLicensePanel" asp-controller="Licenses">License</a>
+        <a class="btn btn-primary" asp-action="Create" asp-controller="shippers">Shippers</a>
+        <a class="btn btn-primary" asp-action="Register" asp-controller="Account">Create Admin Account</a>
+    }
+    @if (User.Identity.Name == "info@pacoshipping.com")
+    {
+        <input id="userTelephone" type="hidden" value="@Model.loginshipperDetails.Telephone" />
+        <input id="userPostcode" type="hidden" value="@Model.loginshipperDetails.PostCode" />
+        <input id="userEmail" type="hidden" value="@Model.loginshipperDetails.EmailAddress" />
+        @*<input id="userEmail" type="hidden" value="@User.Identity.Name" />*@
+        <div class="text-center">
+            <h1 class="jumbotron" style="background-color:darkblue;color:white;color:white;text-align:center;font-weight:600;">PACO SHIPPING LIMITED</h1>
+        </div>
+        @if (ViewBag.BatchExist != 0)
+        {
+
+            <a class="btn btn-primary" asp-action="MainBatchesPanel" asp-controller="Batches">Batch</a>
+            <a class="btn btn-primary" asp-action="MainSendersPanel" asp-controller="Senders">Senders</a>
+            <a class="btn btn-primary" asp-action="MainRecipientsPanel" asp-controller="Recipients">Recipients</a>
+            <a class="btn btn-primary" asp-action="MainTripsPanel" asp-controller="TripDetails">Trips</a>
+            <a class="btn btn-primary" asp-action="MainItemsPanel" asp-controller="Items">Shipping Items</a>
+            <a class="btn btn-primary" asp-action="MainConfigPanel" asp-controller="Config">Administration</a>
+            <a class="btn btn-primary" asp-action="MainFinancePanel" asp-controller="Config">Finances</a>
+            <a class="btn btn-primary" asp-action="MainReportingPanel" asp-controller="Reporting">Reporting</a>
+            @*<a class="btn btn-primary" asp-action="TripList" asp-controller="TripListInContainer">ContainerList</a>*@
+            <a class="btn btn-primary" asp-action="GHListView" asp-controller="TripListInContainer">ContainerList</a>
+            <div>
+                <section id="sectionPendingOrders" class="noShow">
+                    <h4 style="color:#4800ff;text-align:center;">Customer pending orders</h4>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-2" style="font-weight:600;">Search Orders</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="SearchItem" class="form-control" value="" style="font-weight:600;background-color:moccasin;border: solid;" placeholder="enter search text" />@*asp-action="SenderRecipients" asp-controller="Recipients" asp-route="@Model.RecipientSender" asp-route-sender="@Model.RecipientSender"    *@
+                        </div>
+                    </div>
+
+                    <div class="w3-container ">
+                        @*<button id="Test" onclick="{ new $pac.TripManagement.ClientLink().loadCustOrder() }">Test</button>*@
+                        <p id="errorMsg" style="color:red;font-weight:600;font-size:12px;background-color:yellow;"></p>
+                        <table class="table w3-table w3-striped w3-bordered w3-border w3-hoverable table-responsive" id="itemsTabCurrent" style="background-color:#1a266b;color:white;">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        RefNo:
+                                    </th>
+                                    <th>
+                                        Sender:
+                                    </th>
+
+                                    <th>
+                                        Tel:
+                                    </th>
+                                    <th>
+                                        Town:
+                                    </th>
+                                    <th style="text-align:center">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabBodyCurrent" style="font-size:12px;color:red;"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        }
+        else
+        {
+            <a class="btn btn-primary" asp-action="MainBatchesPanel" asp-controller="Batches">Batch</a>
+        }
+
+    }
+    else
+    {
+        if (User.Identity.Name != "")
+        {
+            Senders loginUser = ViewBag.loginUser;
+            <input id="userTelephone" type="hidden" value="@Model.loginUserDetails.Telephone" />
+            <input id="userPostcode" type="hidden" value="@Model.loginUserDetails.PostCode" />
+            <input id="userEmail" type="hidden" value="@Model.loginUserDetails.EmailAddress" />
+            <div class="text-center">
+                <h1 class="jumbotron" style="background-color:darkblue;color:white;color:yellow;text-align:center;font-weight:600;">MANAGE YOUR SHIPPING BOOKINGS HERE</h1>
+            </div>
+            <a class="btn btn-primary" asp-action="Create" asp-controller="Clients">Book your Shipping</a>
+            <a class="btn btn-primary" asp-action="LoadAllClientOrders" asp-controller="Clients" asp-route-clientId="@Model.loginUserDetails.SenderId">Check All Bookings</a>
+            @*<a class="btn btn-primary" asp-action="Create" asp-controller="Clients">Track Shipping</a>*@
+        }
+        else
+        {
+            <div class="text-center">
+                <h1 class="jumbotron" style="background-color:darkblue;color:white;color:yellow;text-align:center;font-weight:600;"><span style="color:red">Please login to book your shipping</span></h1>
+            </div>
+        }
+
+    }
+
+</div>
+
+<div>
+    <section id="sectionPendingOrderss">
+        @*Items modal form*@
+        <!-- The Modal -->
+        <div class="modal fade" id="myItemsModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="background-color:black;color:white;line-height:1.7;text-align:center;font-size:25px;font-weight:600;">Sender Order Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <div class="modal-body">
+                            <div class="row mb-12">
+                                <div class="table-responsive">
+                                    <div>
+                                        <p style="background-color:darkslategrey;color:white;text-align:center;font-size:12px;">Customer Orders Details</p>
+                                    </div>
+                                    <div class="form-group row" style="text-align:center;">
+                                        <p class="col-form-label col-md-2" style="font-size:14px;font-weight:600;">Town/City: </p>
+                                        <p class="col-form-label col-md-2" id="txtTown" style="font-size:12px;color:red;"></p>
+                                        <p class="col-form-label col-md-2" style="font-size:14px;font-weight:600;">Recipient: </p>
+                                        <p class="col-form-label col-md-2" id="txtRecipient" style="font-size:12px;color:red;"></p>
+
+                                    </div>
+                                    <table id="itemTableFly" class="w3-table w3-striped w3-bordered w3-border w3-hoverable table table-responsive">
+                                        <thead id="tabHeadersItem">
+                                            <tr>
+                                                <th>Items   </th>
+                                                <th>Qty     </th>
+                                                @*<th>Details </th>*@
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tabItemTbody">
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+
+                            <div class="modal-footer">
+                                @*<button type="button" id="buttonItemSubmit" class="btn btn-secondary" onclick="{ new $pac.ShippingItems.ClientOrder().SubmitOrder('itemTableFly') }">Submit</button>*@
+                                <button type="button" id="buttonItemClose" class="btn btn-secondary" data-dismiss="modal" onclick="{ new $pac.ShippingItems.ClientOrder().ClearDynamicTable('tabItemTbody') }">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<span id="callChargeModal" data-toggle="modal" data-target="#myChargeModal"></span>
+<span id="callOrderChargeModal" data-toggle="modal" data-target="#orderChargeModal"></span>
+@*Charge for Items Modal form section*@
+@*=================================*@
+<section>
+    <div class="modal fade" id="myChargeModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"><kbd>Charge For Customer Items: </kbd><span id="modal-View-title"></span></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="hidden" id="BatchNumber" disabled="disabled" class="form-control" />
+                    <input type="hidden" id="senderIt" disabled="disabled" class="form-control" />
+                    <input type="hidden" id="recipientIt" disabled="disabled" class="form-control" />
+                    @*<div class="col-md-6">*@
+                    <div class="form-group row">
+                        <label asp-for="ActualRef" class=" col-md-2"></label>
+                        <div class="col-md-4">
+                            <input id="ActualRefNum" style="font-weight:600;" asp-for="ActualRef" disabled="disabled" class="form-control" />@*asp-items="@Model.ShippingItemNames"*@
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="GrandTotal" class="col-form-label col-md-2"></label>
+                        <div class="col-md-4">
+                            <input id="GrandTotal" style="font-weight:600" asp-for="GrandTotal" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <button class="btn-secondary" type="button" id="buttInvoiceOrder" style="width:100%"
+                                    onclick="{ new $pac.TripManagement.ClientOrder().Invoice('BatchNumber','GrandTotal','ActualRefNum') }">
+                                Invoice Customer
+                            </button>
+                        </div>
+                    </div>
+                    <p id="errMsg" style="font-size:11px;font-weight:600;"></p>
+                    <div class="form-group row" style="text-align:center;">
+                        <p class="col-form-label col-md-2" id="txtSenderName" style="font-size:12px;font-weight:600;"></p>
+                        <p class="col-form-label col-md-2" id="txtSenderTelephone" style="font-size:12px;color:red;"></p>
+                        <p class="col-form-label col-md-2" id="txtRecipientName" style="font-size:12px;font-weight:600;"></p>
+                        <p class="col-form-label col-md-2" id="txtRecipientTelephone" style="font-size:12px;color:red;"></p>
+
+                    </div>
+                    <div>
+                        <table id="TableMainInvoice" class="table" border="1">
+                            <thead id="tableHeadInvoice" style="background-color:midnightblue;font-size:12px;color:white;font-weight:600;">
+                                <tr>
+                                    <th>TripID</th>
+                                    <th>Name</th>
+                                    <th>Quantity</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="tableBodyInvoice">
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    @*</div>*@
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button id="btnCheckout" type="button" class="btn btn-secondary">Print</button>
+                    <button type="button" id="btnCloseChargeModal" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+@*END of Charge for Items Modal form section*@
+
+@section Scripts {
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var postcode = document.getElementById('userPostcode').value;
+            var telephone = document.getElementById('userTelephone').value;
+            var email = document.getElementById('userEmail').value;
+            new $pac.TripManagement.LoginUser().setLoginStorage(postcode, telephone, email);
+            //var userData =JSON.stringify( document.getElementById('userDetails').value);
+           // alert(model.loginUserDetails.firstName);
+            $("#SearchItem").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#itemsTabCurrent tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+
+
+            //localStorage.setItem("User", Email: document.getElementById('userEmail'));
+            var userNav = document.getElementById('userEmail');
+            $pac.TripManagement.LoginUser = userNav.value;
+           // getAlert(userNav);
+            if (userNav !=null) {
+                if (userNav.value == "info@pacoshipping.com") {
+                    //alert("Good");
+                    getAlert(userNav);
+                }
+            }
+        });
+      var getAlert = function (element) {
+         // alert(element.value);
+           $.ajax({
+                type: 'GET',
+                url: '@Url.Action("currentTrip", "TripDetails")',
+                data: "",
+                dataType: 'JSON',
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                    var counter = result.length;
+                    if (result.length > 0) {
+                        $('#sectionPendingOrders').addClass("doShow");
+                        var mainTable = document.getElementById("itemsTabCurrent");
+                        var currentTableBody = document.getElementById('tabBodyCurrent');
+                        for (var i = 0; i < counter; i++) {
+                            try {
+                                var tr = document.createElement('tr');
+                                var tdActualRef = document.createElement('td'); tdActualRef.innerHTML = result[i].actualRef;
+                                var tdTheSender = document.createElement('td'); tdTheSender.innerHTML = result[i].theSender;
+                                var tdsendAddress = document.createElement('td'); tdsendAddress.innerHTML = result[i].sendAddress;
+                                var tdSenTel = document.createElement('td'); tdSenTel.innerHTML = result[i].sendTel;
+                                var tdSenTown = document.createElement('td'); tdSenTown.innerHTML = result[i].sendTown;
+                                var btLoad = document.createElement('button'); btLoad.innerHTML = "Load"; btLoad.record = result[i];
+                                var btDel = document.createElement('button'); btDel.innerHTML = "Delete"; btDel.record = result[i];
+                                var btCharge = document.createElement('button'); btCharge.innerHTML = "ChargeOrder"; btCharge.record = result[i];
+                                btLoad.onclick = function () {
+                                    var bID = this.record.batchID;
+                                    var myRef = this.record.actualRef;
+                                    new $pac.TripManagement.ClientLink().loadCustOrder(bID, myRef);
+                                    $('#callOrderItemsModal').click();
+                                }
+                                btDel.onclick = function () {
+                                    var bID = this.record.batchID;
+                                    var myRef = this.record.actualRef;
+                                    new $pac.TripManagement.DeleteClientOrder().WholeOrder(bID, myRef);
+                                }
+                                btCharge.onclick = function () {
+                                    var bID = this.record.batchID;
+                                    var myRef = this.record.actualRef;
+                                    new $pac.TripManagement.ClientOrder().LoadModalItemForCharge(myRef);
+                                    $('#callChargeModal').click();
+                                }
+                                tr.appendChild(tdActualRef)
+                                tr.appendChild(tdTheSender)
+                                tr.appendChild(tdSenTel)
+                                tr.appendChild(tdSenTown)
+                                tr.appendChild(btLoad)
+                                tr.appendChild(btCharge)
+                                currentTableBody.appendChild(tr)
+                            } catch (e) {
+                                alert(e.message);
+                            }
+                        }
+                        mainTable.appendChild(currentTableBody);
+                        document.getElementById('errorMsg').innerHTML = "";
+                    }
+                    else {
+
+                        document.getElementById('errorMsg').innerHTML = "There is no current order";
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="~/lib/MyScripts/utilitiesJS.js"></script>
+    <script src="~/lib/MyScripts/myScript.js"></script>
+    <script src="~/lib/MyScripts/ManageTripJS.js"></script>
+}

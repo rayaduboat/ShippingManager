@@ -1,0 +1,156 @@
+﻿@model FinanceManager.Model.Models.Senders
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="text-center" style="font-weight:700">All Senders</h3>
+<hr />
+
+<p>
+    <a asp-action="MainSendersPanel">Main Senders Window</a>
+</p>
+
+<form method="post" asp-action="SenderRecipients" asp-controller="Recipients">
+    <div class="form-group row">
+        <label class="col-form-label col-sm-2">Search Sender</label>
+        <div class="col-sm-4">
+            <input type="text" id="SearchSender" class="form-control" value="" placeholder="enter search text" />@*asp-action="SenderRecipients" asp-controller="Recipients" asp-route="@Model.RecipientSender" asp-route-sender="@Model.RecipientSender"    *@
+        </div>
+        @*<div class="col-sm-2">
+                <input type="submit" id="btnSearchSender" class="btn-primary" value="Search Sender" />
+            </div>*@
+        @*<div class="col-sm-3">
+                <input type="text" id="SearchRecipients" class="form-control" value="" placeholder="enter search text" />
+            </div>*@
+    </div>
+</form>
+<table class="table w3-table" border="1">
+    <thead style="background-color:steelblue;text-align:center;color:white">
+        <tr style="text-align:center;">
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.AddressLineOne)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.AddressLineTwo)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.PostCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostTown)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.County)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Shippers)
+                </th>*@
+            <th style="text-align:center">Action</th>
+        </tr>
+    </thead>
+    <tbody id="tabBodySender">
+     
+            <tr style="text-align:center">
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.LastName)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.AddressLineOne)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.AddressLineTwo)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.PostCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.PostTown)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.County)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Telephone)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.EmailAddress)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Shippers.Vatnumber)
+                    </td>*@
+                <td style="text-align:center">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.SenderId">Edit</a>
+                    @*<a asp-action="Details" asp-route-id="@item.SenderId">Details</a> |*@
+                    <a class="btn btn-success" asp-action="Delete" asp-route-id="@Model.SenderId">Delete</a>
+                </td>
+            </tr>
+    </tbody>
+</table>
+@section scripts{
+    <script>
+    $(document).ready(function () {
+        $("#SearchSender").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#tabBodySender tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+
+        function TableFilter(textboxID, tbodyID) {
+            if (typeof textboxID != 'undefined' && typeof tbodyID != 'undefined') {
+                try {
+                    $("#" + textboxID).on("keyup", function () {
+                        var value = $(this).val().toLowerCase();
+                        $("#" + tbodyID + " tr").filter(function () {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                    });
+                } catch (e) {
+
+                }
+            }
+        }
+    });
+
+    </script>
+}

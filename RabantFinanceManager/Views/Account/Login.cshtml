@@ -1,0 +1,70 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "User Login";
+}
+
+
+<h2 style="text-align:center;"> User Login</h2>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        <form method="post" style="background-color:midnightblue;margin:auto">
+            <div class="container">
+                <div class="form-group row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <h4 style="text-align:center;font-weight:600;color:white;">Login with your account.</h4>  @*background-color:midnightblue;color:white;*@
+                    </div>
+                </div>
+                <hr style="color:red" />
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group row">
+                    <label asp-for="Email" class="col-form-label col-md-2" style="color:white;"></label>
+                    <div class="col-md-6">
+                        <input asp-for="Email" class="form-control" style="font-size:12px;" />
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Password" class="col-form-label col-md-2" style="color:white;"></label>
+                    <div class="col-md-6">
+                        <input asp-for="Password" class="form-control" style="font-size:12px;" />
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                @*<div class="form-group row">
+                        <div class="checkbox col-md-6">
+                            <label asp-for="RememberMe">
+                                <input asp-for="RememberMe" style="font-size:12px;"/>
+                                @Html.DisplayFor(m=>m.RememberMe)
+                            </label>
+                        </div>
+                    </div>*@
+                <div class="form-group row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <button class="btn btn-secondary" type="submit" style="width:50%;margin-bottom:10px;">Login</button>
+                        <a class="btn btn-danger" style="color:white;width:45%;margin-bottom:10px;" asp-action="LandingPage" asp-controller="Home">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+@*import { Modal } from "../../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle";
+
+        $(document).ready(function () {
+            alert(@Model.Email);
+            localStorage.setItem("User", fullname: NewRefNumber, id: @Model.Email);
+        });*@
+    </script>
+
+
+    @*<partial name="_ValidationScriptsPartial" />*@
+}
+

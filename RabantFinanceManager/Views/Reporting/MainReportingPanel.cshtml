@@ -1,0 +1,326 @@
+﻿
+@{
+    ViewData["Title"] = "MainReportingPanel";
+}
+
+
+<style>
+    .textBoxFormatRep {
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        padding: 6px 12px;
+        font-size: 16px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom:10px;
+        /*max-width: 280px;*/
+    }
+
+    .SendertextBoxFormat {
+        display: block;
+        width: 100% !important;
+        height: 40px;
+        /*padding: 2px 10px;*/
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 4px;
+        /*max-width: 280px;*/
+    }
+
+    .chkBoxFormat {
+        display: inline-block;
+        width: 10% !important;
+        height: 40px;
+        /*padding: 5px 10px;*/
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #555;
+        /*background-color: #fff;*/
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        
+    }
+    .ReportCss {
+        background-color: darkslategrey;
+        color: white;
+        border: solid;
+        padding-top:30px;
+    }
+    .myButtonCss {
+        height: 40px;
+        border-radius: 15px;
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+</style>
+
+
+
+<div class="text-center">
+    <h1 class="jumbotron" style="background-color:darkblue;color:white;color:yellow;text-align:center;font-weight:600;">Reporting Panel</h1>
+</div>
+<div>
+    <span id="callOrderItemsModal" data-toggle="modal" data-target="#myItemsModal"></span>
+</div>
+<div style="text-align:center;">
+
+    @*<a class="btn btn-primary" asp-action="MainShippersPanel" asp-controller="Shippers">Shippers</a>*@
+
+    <a class="btn btn-secondary" onclick="{ new $pac.TripManagement.Reporting().Expenditure('callExpenditureModal') }">Expenditure</a>
+    <a class="btn btn-secondary" asp-action="Senders" asp-controller="Reporting">Income</a>
+    <a class="btn btn-secondary" asp-action="Recipients" asp-controller="Reporting">Performance</a>
+    <a class="btn btn-secondary" asp-action="MainTripsPanel" asp-controller="Reporting">TripsList</a>
+
+    <span id="callExpenditureModal" data-toggle="modal" data-target="#ExpenditureReportModal"></span>
+</div>
+<div>
+    <section id="sectionPendingOrders" class="noShow">
+        @*<h4 style="color:#4800ff;text-align:center;">Customer pending orders</h4>*@
+        <div class="w3-container ">
+            @*<button id="Test" onclick="{ new $pac.TripManagement.ClientLink().loadCustOrder() }">Test</button>*@
+            @*<table class="table w3-table w3-striped w3-bordered w3-border w3-hoverable table-responsive" id="itemsTabCurrent" style="background-color:#1a266b;color:white;">
+                <thead>
+                    <tr>
+                        <th>
+                            RefNo:
+                        </th>
+                        <th>
+                            Sender:
+                        </th>
+
+                        <th>
+                            Tel:
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tabBodyCurrent" style="font-size:12px;color:red;"></tbody>
+            </table>*@
+        </div>
+    </section>
+</div>
+<span id="callOrderChargeModal" data-toggle="modal" data-target="#orderChargeModal"></span>
+<div>
+    <section id="sectionExpenditureReport">
+        @*Items modal form*@
+        <!-- The Modal -->
+        <div class="modal fade" id="ExpenditureReportModal">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="background-color:black;color:white;line-height:1.7;text-align:center;font-size:25px;font-weight:600;">Expenditure Reporting window</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <div class="modal-body">
+                            <div class="row mb-12">
+                                <div class="table-responsive">
+                                    <div>
+                                        @*<p style="background-color:darkslategrey;color:white;text-align:center;font-size:12px;">Customer Orders Details</p>*@
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 ReportCss">
+                                            <label class="col-sm-3" style="font-weight:600;margin-bottom:2px;">BatchID</label>
+                                            <select class="col-sm-8 textBoxFormatRep">
+                                                <option value="0">--Select Batch--</option>
+                                                <option value="1">JUN2020_1_8001</option>
+                                            </select>
+                                            <label class="col-sm-3" style="font-weight:600;margin-bottom:2px;">Report</label>
+                                            <select class="col-sm-8 textBoxFormatRep">
+                                                <option value="0">--Select Report--</option>
+                                                <option value="1">General Expenditure</option>
+                                                <option value="2">Expenditure By Batches</option>
+                                                <option value="3">Daily Expenditure</option>
+                                                <option value="4">Weekly Expenditure</option>
+                                                <option value="5">Monthly Expenditure</option>
+                                                <option value="6">Yearly Expenditure</option>
+                                                <option value="7">Expenditure By Items</option>
+                                            </select>
+                                            <label class="col-sm-3" style="font-weight:600;margin-bottom:2px;">Period</label>
+                                            <select class="col-sm-8 textBoxFormatRep">
+                                                <option value="1">--Select Period--</option>
+                                                <option value="2">Daily</option>
+                                                <option value="3">Weekly</option>
+                                                <option value="4">Monthly</option>
+                                                <option value="5">Yearly</option>
+                                            </select>
+
+                                            <div class="row">
+                                                <div class="col-sm-4"></div>
+                                                <button value="" class="myButtonCss col-sm-4">Export</button>
+                                                <button value="" class="myButtonCss col-sm-4">View</button>
+                                                @*<button value="" class="myButtonCss col-sm-7">Email Report</button>*@
+                                            </div>
+
+
+                                            @*<button value="" class="myButtonCss col-sm-5">Export</button>
+                                            <button value="" class="myButtonCss col-sm-6">ViewReport</button>*@
+                                        </div>
+                                        <div class="col-sm-4 ReportCss">
+                                            <label class="col-sm-4" style="font-weight:600;margin-bottom:2px;">StartDate</label>
+                                            <input class="col-sm-7 textBoxFormatRep" type="date" name="name" value="" placeholder="dd/MM/yyyy" />
+                                            <label class="col-sm-4" style="font-weight:600;margin-bottom:2px;">EndDate</label>
+                                            <input class="col-sm-7 textBoxFormatRep" type="date" name="name" value="" placeholder="dd/MM/yyyy" />
+                                            <label class="col-sm-4" style="font-weight:600;margin-bottom:2px;">Email</label>
+                                            <input class="col-sm-7 textBoxFormatRep" type="text" name="name" value="" placeholder="enter email" style="font-size:11px;font-weight:500;" />
+                                            <div class="row">
+                                                <div class="col-sm-4"></div>
+                                                <button value="" class="myButtonCss col-sm-7">Email Report</button>
+                                            </div>
+                                            
+                                            @*<button value="" class="myButtonCss col-sm-6">ViewReport</button>*@
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <select class="textBoxFormatRep" id="selectBatch"></select>
+                                            <select class="textBoxFormatRep" id="selectExpenseItem"></select>
+                                            <select class="textBoxFormatRep" id="selectExpenseItem"></select>
+                                            <select class="textBoxFormatRep" id="selectYear"></select>
+                                            <select class="textBoxFormatRep" id="selectMonth"></select>
+                                        </div>
+                                        
+                                    </div>
+                                    <table id="itemTableFly" class="w3-table w3-striped w3-bordered w3-border w3-hoverable table table-responsive">
+                                        <thead id="tabHeadersItem" style="background-color:darkslategrey;color:white; font-weight:600;">
+                                            <tr>
+                                                <th>Date   </th>
+                                                <th>ItemName     </th>
+                                                <th>Description </th>
+                                                <th>PayMode</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tabItemTbody">
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+
+                            <div class="modal-footer">
+                                @*<button type="button" id="buttonItemSubmit" class="btn btn-secondary" onclick="{ new $pac.ShippingItems.ClientOrder().SubmitOrder('itemTableFly') }">Submit</button>*@
+                                <button type="button" id="buttonItemClose" class="btn btn-secondary" data-dismiss="modal" onclick="{ new $pac.ShippingItems.ClientOrder().ClearDynamicTable('tabItemTbody') }">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<span id="callChargeModal" data-toggle="modal" data-target="#myChargeModal"></span>
+@*Charge for Items Modal form section*@
+@*=================================*@
+<section>
+    <div class="modal fade" id="orderChargeModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"><kbd>Charge For Customer Items: </kbd><span id="modal-View-title"></span></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="hidden" id="BatchNumber" disabled="disabled" class="form-control" />
+                    <input type="hidden" id="senderIt" disabled="disabled" class="form-control" />
+                    <input type="hidden" id="recipientIt" disabled="disabled" class="form-control" />
+                    @*<div class="col-md-6">*@
+                    <div class="form-group row">
+                        <label class=" col-md-2">RefNumber</label>
+                        <div class="col-md-4">
+                            <input id="ActualRefNum" style="font-weight:600;" disabled="disabled" class="form-control" />@*asp-items="@Model.ShippingItemNames"*@
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Grand Total</label>
+                        <div class="col-md-4">
+                            <input id="GrandTotal" style="font-weight:600" class="form-control" />
+                        </div>
+                    </div>
+                    @*<div class="form-group row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <button class="btn-secondary" type="button" id="buttInvoiceOrder" style="width:100%"
+                                        onclick="{ new $pac.TripManagement.ClientOrder().Invoice('BatchNumber','GrandTotal','ActualRefNum') }">
+                                    Invoice Customer
+                                </button>
+                            </div>
+                        </div>*@
+                    <p id="errMsg" style="font-size:11px;font-weight:600;"></p>
+                    <div class="form-group row" style="text-align:center;">
+                        <p class="col-form-label col-md-2" id="txtSenderName" style="font-size:12px;font-weight:600;"></p>
+                        <p class="col-form-label col-md-2" id="txtSenderTelephone" style="font-size:12px;color:red;"></p>
+                        <p class="col-form-label col-md-2" id="txtSenderTown" style="font-size:12px;color:red;"></p>
+
+                        <p class="col-form-label col-md-2" id="txtRecipientName" style="font-size:12px;font-weight:600;"></p>
+                        <p class="col-form-label col-md-2" id="txtRecipientTelephone" style="font-size:12px;color:red;"></p>
+                        <p class="col-form-label col-md-2" id="txtRecipientTown" style="font-size:12px;color:red;"></p>
+                    </div>
+                    <div>
+                        <table id="TableMainInvoice" class="table" border="1">
+                            <thead id="tableHeadInvoice" style="background-color:midnightblue;font-size:12px;color:white;font-weight:600;">
+                                <tr>
+                                    <th>TripID</th>
+                                    <th>Name</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBodyInvoice">
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    @*</div>*@
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button id="btnCheckout" type="button" class="btn btn-secondary" onclick="{ new $pac.TripManagement.ClientOrder().Invoice('BatchNumber','GrandTotal','ActualRefNum') }">
+                        Invoice Order
+                    </button>
+                    <button type="button" id="btnCloseChargeModal" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+@*END of Charge for Items Modal form section*@
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+      
+    });
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/MyScripts/utilitiesJS.js"></script>
+    <script src="~/lib/MyScripts/myScript.js"></script>
+    <script src="~/lib/MyScripts/ManageTripJS.js"></script>
+}

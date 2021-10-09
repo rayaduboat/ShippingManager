@@ -1,0 +1,143 @@
+﻿@model IEnumerable<FinanceManager.Model.Models.Shippers>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table w3-table" border="1">
+    <thead style="background-color:teal;text-align:center;color:white">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShippersId)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Dob)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Vatnumber)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.CompanyNumber)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.AddressLineOne)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.AddressLineTwo)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.PostTown)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.County)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.PostCode)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.WebAddress)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.License)
+            </th>*@
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShippersId)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Dob)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Vatnumber)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.CompanyNumber)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.AddressLineOne)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.AddressLineTwo)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.PostTown)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.County)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.PostCode)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.WebAddress)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.License.LicenseNumber)
+            </td>*@
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ShippersId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ShippersId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ShippersId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

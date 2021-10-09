@@ -1,0 +1,65 @@
+﻿@model FinanceManager.Model.Models.LinkCreator
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>LinkCreator</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenderId" class="control-label"></label>
+                <input asp-for="SenderId" class="form-control" />
+                <span asp-validation-for="SenderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BatchId" class="control-label"></label>
+                <input asp-for="BatchId" class="form-control" />
+                <span asp-validation-for="BatchId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RefNum" class="control-label"></label>
+                <input asp-for="RefNum" class="form-control" />
+                <span asp-validation-for="RefNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UrlLink" class="control-label"></label>
+                <input asp-for="UrlLink" class="form-control" />
+                <span asp-validation-for="UrlLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UniqueString" class="control-label"></label>
+                <input asp-for="UniqueString" class="form-control" />
+                <span asp-validation-for="UniqueString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderStatus" class="control-label"></label>
+                <input asp-for="OrderStatus" class="form-control" />
+                <span asp-validation-for="OrderStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LinkStatus" class="control-label"></label>
+                <input asp-for="LinkStatus" class="form-control" />
+                <span asp-validation-for="LinkStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

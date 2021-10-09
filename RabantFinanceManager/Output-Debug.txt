@@ -1,0 +1,393 @@
+﻿Verbose logs are written to:
+x:\temp\visualstudio-js-debugger.txt
+'iisexpress.exe' (CoreCLR: DefaultDomain): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Private.CoreLib.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\RabantFinanceManager.dll'. Symbols loaded.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Runtime.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Server.IIS.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Runtime.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Hosting.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Hosting.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Hosting.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Configuration.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.DependencyInjection.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.DependencyInjection.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Logging.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Collections.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\netstandard.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.ComponentModel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.IO.FileSystem.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Hosting.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Configuration.EnvironmentVariables.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Threading.Tasks.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Threading.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Server.Kestrel.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Server.Kestrel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Runtime.InteropServices.RuntimeInformation.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Server.IISIntegration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Configuration.CommandLine.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Configuration.UserSecrets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.FileProviders.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.FileProviders.Physical.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Memory.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Configuration.FileExtensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Configuration.Json.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Runtime.InteropServices.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Configuration.Binder.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Private.Uri.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Http.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.FileProviders.Composite.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Xml.XDocument.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Private.Xml.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Private.Xml.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Threading.Thread.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Security.Cryptography.Algorithms.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Text.Encoding.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.IO.FileSystem.Watcher.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.ComponentModel.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Collections.Concurrent.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.FileSystemGlobbing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Threading.Timer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Threading.Overlapped.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\Microsoft.Win32.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Text.Json.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Buffers.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Numerics.Vectors.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Runtime.CompilerServices.Unsafe.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Options.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Logging.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Logging.EventLog.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Logging.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Options.ConfigurationExtensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Logging.Console.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Logging.Debug.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Logging.EventSource.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Diagnostics.Tracing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Diagnostics.DiagnosticSource.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Http.Features.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Http.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Connections.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Net.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.HostFiltering.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.HttpOverrides.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Routing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.ObjectPool.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Routing.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.ObjectModel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Authentication.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Authentication.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Security.Claims.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Identity.Stores.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\FinanceManager.Repository.dll'. Symbols loaded.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Identity.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Identity.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\FinanceManager.Model.dll'. Symbols loaded.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.ViewFeatures.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Authentication.Cookies.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Authentication.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.DataProtection.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.DataProtection.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Cryptography.Internal.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.WebEncoders.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Text.Encodings.Web.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Linq.Expressions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\RabantFinanceManager.Views.dll'. Symbols loaded.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Razor.Runtime.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.Razor.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V3.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Resources.ResourceManager.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V3.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.ApiExplorer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Authorization.Policy.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Authorization.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.Cors.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Cors.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.DataAnnotations.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Components.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.JSInterop.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Antiforgery.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Caching.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Caching.Memory.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.TagHelpers.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Razor.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Mvc.RazorPages.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Reflection.Emit.Lightweight.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Extensions.Localization.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Threading.ThreadPool.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Console.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\System.Diagnostics.EventLog.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Collections.Specialized.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.ComponentModel.TypeConverter.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\Microsoft.Win32.Registry.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Diagnostics.Debug.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: Information: User profile is available. Using 'C:\Users\RABWorld\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Text.RegularExpressions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Reflection.Emit.ILGeneration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Reflection.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Diagnostics.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.HttpsPolicy.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.StaticFiles.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.Net.Http.Headers.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Drawing.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Relational.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Metadata.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Html.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Security.Principal.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.ComponentModel.Annotations.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Diagnostics.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.Hosting.Lifetime: Information: Application started. Press Ctrl+C to shut down.
+Microsoft.Hosting.Lifetime: Information: Hosting environment: Development
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\System.IO.Pipelines.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.Hosting.Lifetime: Information: Content root path: D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Security.Cryptography.X509Certificates.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/  
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executing endpoint 'RabantFinanceManager.Controllers.HomeController.LandingPage (RabantFinanceManager)'
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'Anonymously Hosted DynamicMethods Assembly'. 
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Route matched with {action = "LandingPage", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LandingPage() on controller RabantFinanceManager.Controllers.HomeController (RabantFinanceManager).
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.SqlServer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Data.Common.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Transactions.Local.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\Microsoft.CSharp.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executing ViewResult, running view LandingPage.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.WebUtilities.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Security.Cryptography.Csp.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Security.Cryptography.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Http.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executed ViewResult - view LandingPage executed in 191.3589ms.
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Executed action RabantFinanceManager.Controllers.HomeController.LandingPage (RabantFinanceManager) in 455.4997ms
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executed endpoint 'RabantFinanceManager.Controllers.HomeController.LandingPage (RabantFinanceManager)'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 595.9311ms 200 text/html; charset=utf-8
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Net.WebSockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/css/w3.css  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/jquery/jquery.min.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/bootstrap/css/bootstrap.css  
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Security.Principal.Windows.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/jquery/jquery.min.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\jquery\jquery.min.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/bootstrap/css/bootstrap.css'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\bootstrap\css\bootstrap.css'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/css/w3.css'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\css\w3.css'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 88.6658ms 200 text/css
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 87.1928ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 88.6575ms 200 text/css
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/myScript.js  
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/myScript.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\myScript.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 8.974ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/utilitiesJS.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/ManageTripJS.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/Images/BackgroundMain.png  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/ShippingItems.js  
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/utilitiesJS.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\utilitiesJS.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/ShippingItems.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\ShippingItems.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/ManageTripJS.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\ManageTripJS.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 30.6264ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 38.7043ms 200 application/javascript
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/Images/BackgroundMain.png'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\Images\BackgroundMain.png'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 33.3021ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 46.7817ms 200 image/png
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/Account/Login  
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executing endpoint 'RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager)'
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller RabantFinanceManager.Controllers.AccountController (RabantFinanceManager).
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executing ViewResult, running view Login.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executed ViewResult - view Login executed in 55.2664ms.
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Executed action RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager) in 66.9259ms
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executed endpoint 'RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager)'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 91.4251ms 200 text/html; charset=utf-8
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/Account/Login  
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executing endpoint 'RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager)'
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller RabantFinanceManager.Controllers.AccountController (RabantFinanceManager).
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executing ViewResult, running view Login.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executed ViewResult - view Login executed in 6.2088ms.
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Executed action RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager) in 15.7969ms
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executed endpoint 'RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager)'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 39.6601ms 200 text/html; charset=utf-8
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/bootstrap/css/bootstrap.css  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/jquery/jquery.min.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/css/w3.css  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/myScript.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/ManageTripJS.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/utilitiesJS.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/ShippingItems.js  
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/myScript.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\myScript.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/css/w3.css'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\css\w3.css'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 25.9057ms 200 application/javascript
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/utilitiesJS.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\utilitiesJS.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 34.5101ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 38.0756ms 200 text/css
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/ManageTripJS.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\ManageTripJS.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/ShippingItems.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\ShippingItems.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 53.1798ms 200 application/javascript
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/bootstrap/css/bootstrap.css'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\bootstrap\css\bootstrap.css'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 57.4522ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 67.9247ms 200 text/css
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/jquery/jquery.min.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\jquery\jquery.min.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 73.084ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 POST https://localhost:44325/Account/Login application/x-www-form-urlencoded 230
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executing endpoint 'RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager)'
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FinanceManager.Model.Models.LoginViewModel) on controller RabantFinanceManager.Controllers.AccountController (RabantFinanceManager).
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 POST https://localhost:44325/Account/Login application/x-www-form-urlencoded 230
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executing endpoint 'RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager)'
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FinanceManager.Model.Models.LoginViewModel) on controller RabantFinanceManager.Controllers.AccountController (RabantFinanceManager).
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Collections.Immutable.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.EntityFrameworkCore.Infrastructure: Information: Entity Framework Core 3.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Infrastructure: Information: Entity Framework Core 3.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Linq.Queryable.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\bin\Debug\netcoreapp3.0\System.Configuration.ConfigurationManager.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Xml.ReaderWriter.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Net.WebClient.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+The thread 0x38b0 has exited with code 0 (0x0).
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Text.Encoding.CodePages.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.10\System.Diagnostics.Process.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedUserName] = @__normalizedUserName_0) AND ([a].[NormalizedUserName] IS NOT NULL AND @__normalizedUserName_0 IS NOT NULL)) OR ([a].[NormalizedUserName] IS NULL AND @__normalizedUserName_0 IS NULL)
+The thread 0x2d0c has exited with code 0 (0x0).
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedUserName] = @__normalizedUserName_0) AND ([a].[NormalizedUserName] IS NOT NULL AND @__normalizedUserName_0 IS NOT NULL)) OR ([a].[NormalizedUserName] IS NULL AND @__normalizedUserName_0 IS NULL)
+'iisexpress.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.10\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE ([a].[UserId] = @__user_Id_0) AND @__user_Id_0 IS NOT NULL
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE ([a].[UserId] = @__user_Id_0) AND @__user_Id_0 IS NOT NULL
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE ([a].[UserId] = @__userId_0) AND @__userId_0 IS NOT NULL
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE ([a].[UserId] = @__userId_0) AND @__userId_0 IS NOT NULL
+Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler: Information: AuthenticationScheme: Identity.Application signed in.
+Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler: Information: AuthenticationScheme: Identity.Application signed in.
+Microsoft.AspNetCore.Mvc.RedirectToActionResult: Information: Executing RedirectResult, redirecting to /Home/Index?Email=john.smith@gmail.com&Password=pass12345&RememberMe=False.
+Microsoft.AspNetCore.Mvc.RedirectToActionResult: Information: Executing RedirectResult, redirecting to /Home/Index?Email=john.smith@gmail.com&Password=pass12345&RememberMe=False.
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Executed action RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager) in 2367.2966ms
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Executed action RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager) in 2283.301ms
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executed endpoint 'RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager)'
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executed endpoint 'RabantFinanceManager.Controllers.AccountController.Login (RabantFinanceManager)'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 2428.3045ms 0 
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 2310.8573ms 302 
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/Home/Index?Email=john.smith@gmail.com&Password=pass12345&RememberMe=False  
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executing endpoint 'RabantFinanceManager.Controllers.HomeController.Index (RabantFinanceManager)'
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller RabantFinanceManager.Controllers.HomeController (RabantFinanceManager).
+Microsoft.EntityFrameworkCore.Infrastructure: Information: Entity Framework Core 3.0.1 initialized 'FinanceManagerDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__email_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[SenderID], [s].[AddressLineOne], [s].[AddressLineTwo], [s].[Country], [s].[County], [s].[EmailAddress], [s].[FirstName], [s].[Gender], [s].[LastName], [s].[Password], [s].[PostCode], [s].[PostTown], [s].[ShippersID], [s].[Telephone], [s].[Title]
+FROM [Batches].[Senders] AS [s]
+WHERE ([s].[EmailAddress] = @__email_0) AND @__email_0 IS NOT NULL
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executing ViewResult, running view Index.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executed ViewResult - view Index executed in 49.1797ms.
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Executed action RabantFinanceManager.Controllers.HomeController.Index (RabantFinanceManager) in 846.6886ms
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executed endpoint 'RabantFinanceManager.Controllers.HomeController.Index (RabantFinanceManager)'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 870.279ms 200 text/html; charset=utf-8
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/bootstrap/css/bootstrap.css  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/css/w3.css  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/jquery/jquery.min.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/utilitiesJS.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/ManageTripJS.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/ShippingItems.js  
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/utilitiesJS.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\utilitiesJS.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/myScript.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 19.4905ms 200 application/javascript
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/ShippingItems.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\ShippingItems.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 28.9969ms 200 application/javascript
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/myScript.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\myScript.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/jquery/jquery.min.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\jquery\jquery.min.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/ManageTripJS.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\ManageTripJS.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/bootstrap/css/bootstrap.css'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\bootstrap\css\bootstrap.css'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 46.944ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 57.9841ms 200 text/css
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 49.9155ms 200 application/javascript
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/css/w3.css'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\css\w3.css'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 40.5508ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 73.1861ms 200 text/css
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/Clients/LoadAllClientOrders?clientId=10110  
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService: Information: Authorization was successful.
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executing endpoint 'RabantFinanceManager.Controllers.ClientsController.LoadAllClientOrders (RabantFinanceManager)'
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Route matched with {action = "LoadAllClientOrders", controller = "Clients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoadAllClientOrders(Int32) on controller RabantFinanceManager.Controllers.ClientsController (RabantFinanceManager).
+Microsoft.EntityFrameworkCore.Infrastructure: Information: Entity Framework Core 3.0.1 initialized 'FinanceManagerDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__clientId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[TripID], [t].[ActualRef], [t].[BatchID], [t].[Comment], [t].[GrandTotal], [t].[ItemID], [t].[Name], [t].[OrderDate], [t].[Quantity], [t].[RecipientID], [t].[SenderID], [t].[Status], [t].[Total], [s].[SenderID], [s].[AddressLineOne], [s].[AddressLineTwo], [s].[Country], [s].[County], [s].[EmailAddress], [s].[FirstName], [s].[Gender], [s].[LastName], [s].[Password], [s].[PostCode], [s].[PostTown], [s].[ShippersID], [s].[Telephone], [s].[Title], [r].[RecipientID], [r].[AddressLineOne], [r].[AddressLineTwo], [r].[Country], [r].[County], [r].[EmailAddress], [r].[FirstName], [r].[Gender], [r].[LastName], [r].[PostCode], [r].[PostTown], [r].[SenderID], [r].[Telephone], [r].[Title]
+FROM [Batches].[TripDetails] AS [t]
+INNER JOIN [Batches].[Senders] AS [s] ON [t].[SenderID] = [s].[SenderID]
+INNER JOIN [Batches].[Recipients] AS [r] ON [t].[RecipientID] = [r].[RecipientID]
+WHERE ([t].[SenderID] = @__clientId_0) AND @__clientId_0 IS NOT NULL
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/Clients/LoadAllClientOrders?clientId=10110  
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService: Information: Authorization was successful.
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executing endpoint 'RabantFinanceManager.Controllers.ClientsController.LoadAllClientOrders (RabantFinanceManager)'
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Route matched with {action = "LoadAllClientOrders", controller = "Clients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoadAllClientOrders(Int32) on controller RabantFinanceManager.Controllers.ClientsController (RabantFinanceManager).
+Microsoft.EntityFrameworkCore.Infrastructure: Information: Entity Framework Core 3.0.1 initialized 'FinanceManagerDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executing DbCommand [Parameters=[@__clientId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[TripID], [t].[ActualRef], [t].[BatchID], [t].[Comment], [t].[GrandTotal], [t].[ItemID], [t].[Name], [t].[OrderDate], [t].[Quantity], [t].[RecipientID], [t].[SenderID], [t].[Status], [t].[Total], [s].[SenderID], [s].[AddressLineOne], [s].[AddressLineTwo], [s].[Country], [s].[County], [s].[EmailAddress], [s].[FirstName], [s].[Gender], [s].[LastName], [s].[Password], [s].[PostCode], [s].[PostTown], [s].[ShippersID], [s].[Telephone], [s].[Title], [r].[RecipientID], [r].[AddressLineOne], [r].[AddressLineTwo], [r].[Country], [r].[County], [r].[EmailAddress], [r].[FirstName], [r].[Gender], [r].[LastName], [r].[PostCode], [r].[PostTown], [r].[SenderID], [r].[Telephone], [r].[Title]
+FROM [Batches].[TripDetails] AS [t]
+INNER JOIN [Batches].[Senders] AS [s] ON [t].[SenderID] = [s].[SenderID]
+INNER JOIN [Batches].[Recipients] AS [r] ON [t].[RecipientID] = [r].[RecipientID]
+WHERE ([t].[SenderID] = @__clientId_0) AND @__clientId_0 IS NOT NULL
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executing ViewResult, running view LoadAllClientOrders.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executing ViewResult, running view LoadAllClientOrders.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executed ViewResult - view LoadAllClientOrders executed in 47.2413ms.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: Information: Executed ViewResult - view LoadAllClientOrders executed in 47.8045ms.
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Executed action RabantFinanceManager.Controllers.ClientsController.LoadAllClientOrders (RabantFinanceManager) in 239.6963ms
+Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Information: Executed action RabantFinanceManager.Controllers.ClientsController.LoadAllClientOrders (RabantFinanceManager) in 177.5009ms
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/myScript.js  
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executed endpoint 'RabantFinanceManager.Controllers.ClientsController.LoadAllClientOrders (RabantFinanceManager)'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/bootstrap/css/bootstrap.css  
+Microsoft.AspNetCore.Routing.EndpointMiddleware: Information: Executed endpoint 'RabantFinanceManager.Controllers.ClientsController.LoadAllClientOrders (RabantFinanceManager)'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 304.6115ms 200 text/html; charset=utf-8
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 222.0704ms 200 text/html; charset=utf-8
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/jquery/jquery.min.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/utilitiesJS.js  
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/myScript.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\myScript.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/ShippingItems.js  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 28.8869ms 200 application/javascript
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/utilitiesJS.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\utilitiesJS.js'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/jquery/jquery.min.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\jquery\jquery.min.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 26.6708ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 63.6342ms 200 application/javascript
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/bootstrap/css/bootstrap.css'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\bootstrap\css\bootstrap.css'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/ShippingItems.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\ShippingItems.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 79.7754ms 200 text/css
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 73.1641ms 200 application/javascript
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/css/w3.css  
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request starting HTTP/2.0 GET https://localhost:44325/lib/MyScripts/ManageTripJS.js  
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/css/w3.css'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\css\w3.css'
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Information: Sending file. Request path: '/lib/MyScripts/ManageTripJS.js'. Physical path: 'D:\RABWorld\Personal\Software Development\Apps\Paco Shipping Ltd\RabantFinanceManager\wwwroot\lib\MyScripts\ManageTripJS.js'
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 101.6791ms 200 text/css
+Microsoft.AspNetCore.Hosting.Diagnostics: Information: Request finished in 104.9018ms 200 application/javascript
+The thread 0x4574 has exited with code 0 (0x0).
+The thread 0x467c has exited with code 0 (0x0).
+The thread 0x4124 has exited with code 0 (0x0).
+The thread 0x24c0 has exited with code 0 (0x0).
+The thread 0x244 has exited with code 0 (0x0).
+The thread 0x3b44 has exited with code 0 (0x0).
+The thread 0xaf4 has exited with code 0 (0x0).
+The thread 0x4690 has exited with code 0 (0x0).
+The thread 0x3478 has exited with code 0 (0x0).
+The thread 0x2ffc has exited with code 0 (0x0).
+The thread 0x402c has exited with code 0 (0x0).
+The thread 0x3874 has exited with code 0 (0x0).
+The program '[15604] iisexpress.exe' has exited with code -1 (0xffffffff).
+The program '' has exited with code -1 (0xffffffff).

@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<IdentityUser> signInManager;
+@*@model FinanceManager.Model.Models.TripEditModel*@
+
+<html lang="en">
+<head>
+    <title>Rabant Solutions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <link href="~/css/w3.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.1/angular-material.min.css">
+
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.1/angular-material.min.js"></script>
+
+    <style>
+        body {
+            max-width: 90%;
+            margin: auto;
+        }
+
+        button.btn.add::before {
+            font-family: fontAwesome;
+            content: "\f067\00a0";
+        }
+
+        button.btn.edit::before {
+            font-family: fontAwesome;
+            content: "\f044\00a0";
+        }
+
+        button.btn.save::before {
+            font-family: fontAwesome;
+            content: "\f00c\00a0";
+        }
+
+        button.btn.cancel::before {
+            font-family: fontAwesome;
+            content: "\f00d\00a0";
+        }
+
+        .btn span.icon {
+            background: url(images/search.png) no-repeat;
+            float: left;
+            width: 10px;
+            height: 40px;
+        }
+
+        .FormDesign {
+            background-color: darkslategrey;
+            color: white;
+            border: solid;
+            padding-top: 30px;
+        }
+
+        .backGimage {
+            background-image: url('../Images/backgsm1.png')
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .orderimg {
+            width: auto;
+            height: 50%;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+            table.UnEvenLayout {
+                table-layout: auto;
+                width: 100%;
+            }
+
+        .textBoxFormat {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 6px 12px;
+            font-size: 16px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /*max-width: 280px;*/
+        }
+
+        .textBoxFormatRep {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            padding: 6px 12px;
+            font-size: 16px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            /*max-width: 280px;*/
+        }
+
+        .validateMemFormat {
+            width: 30%;
+            height: 35px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        .btnFormat {
+            /*width: 100%*/;
+            height: 35px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        .btnFormat_a {
+            /*width: 100%*/;
+            height: 35px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        .myH1Text {
+            color: #fff;
+            text-align: center;
+            background-color: darkslategrey;
+        }
+
+        .NewPanelColor {
+            background-color: darkslategrey !important;
+            border-color: darkslategrey !important;
+            background-image: linear-gradient(to bottom,#fff 0,darkslategrey 100%) !important;
+        }
+
+        .btnStyle {
+            background-color: darkslategrey;
+            /*width: 19em;*/
+            border-radius: 7px;
+            color: #fff;
+            height: 45px;
+        }
+
+        .reduceFont {
+        }
+
+        .errorStyle {
+            color: red;
+            font-size: x-small;
+            margin-left: 100px;
+        }
+
+        .SendRecStyle {
+            text-decoration: underline;
+            font-size: 13px;
+            color: dodgerblue;
+            font-weight: 600;
+        }
+
+        .smallMargin {
+            padding: 20px 20px;
+            display: block;
+        }
+
+        #TabRefLarge {
+            display: block;
+        }
+
+        #TabRef {
+            display: block !important;
+        }
+
+        #TabRefMob2 {
+            display: none !important;
+        }
+
+        #TabRefMob {
+            display: none !important;
+        }
+
+        #TabRefsenRecMob {
+            display: none;
+        }
+
+        #searchTabMob {
+            display: none;
+        }
+
+        #searchTabMob2 {
+            display: none !important;
+        }
+
+        #labelRef {
+            display: block !important;
+        }
+
+        #Save {
+            display: block;
+        }
+
+        #btnPlaceOrderDST {
+            display: block !important;
+        }
+
+        #refreshId {
+            color: blue !important;
+        }
+
+        a:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #SaveMob {
+            display: none !important;
+        }
+
+        @@media (max-width:767px) {
+            label {
+                display: block;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
+            #myUrlDTA {
+                display: none !important;
+            }
+
+            .textBoxFormat {
+                text-align: center !important;
+                font-size: 14px;
+            }
+
+            .btnFormat {
+                display: block !important;
+                margin: auto;
+                margin-top: 5px;
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            .btnFormat_a {
+                display: block !important;
+                margin: auto;
+                margin-top: 5px;
+                border-radius: 10px;
+                width: 50%;
+            }
+
+            #btnPlaceOrderDST {
+                display: none !important;
+            }
+
+            .form-control {
+                margin: 0 auto;
+            }
+
+            textarea {
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            #bntLoadItem {
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            #TxtRef {
+                display: block;
+                margin: 0 auto !important;
+                text-align: center;
+            }
+
+            #labelRef {
+                display: none !important;
+            }
+
+            #TabRef {
+                display: none !important;
+            }
+
+            #TabRefMob {
+                display: block !important;
+            }
+
+            .reduceTextMB {
+                font-size: 14px !important;
+            }
+
+            #TabRefMob2 {
+                display: block !important;
+            }
+
+            #TabItemsLoad {
+                font-size: 12px;
+            }
+
+            .btn-secondary {
+                color: #fff;
+                background-color: #ff006e;
+                border-color: #868e96;
+            }
+
+            #searchTabMob2 {
+                display: block !important;
+            }
+
+            .reduceButtFont {
+                font-size: 12px !important;
+            }
+
+            #searchTab {
+                display: none !important;
+            }
+
+            #SaveMob {
+                display: block !important;
+            }
+        }
+        /* @@media (max-width:767px) {
+            label {
+                display: block;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+        }*/
+    </style>
+    @*<style>
+            .carousel-inner img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>*@
+</head>
+
+<body>
+    <input id="userEmail" type="hidden" value="@User.Identity.Name" />
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Rabant Solutions</a>*@
+                <a class="navbar-brand" style="color:steelblue;font-weight:700;">Paco Shipping Limited</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                @if (ViewBag.ShowTopBar ?? false)
+                {
+                    <div id="noNeedForCustomers" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <partial name="_LoginPartial" />
+                        <ul class="navbar-nav flex-grow-1">
+                            @*<li class="nav-item">
+                                    <a class="nav-link text-dark" style="color:white;" asp-area="" asp-controller="Home" asp-action="LandingPage">Home</a>
+                                </li>*@
+                            @*<li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                </li>*@
+                        </ul>
+                    </div>
+                }
+
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+
+            @if (ViewBag.ShowTopBar ?? false)
+            {
+                @*<p id="backToMain">
+                        <a asp-action="Index" asp-controller="Home">Main Management Page</a>
+                    </p>*@
+            }
+            @if (User.Identity.Name == "info@pacoshipping.com")
+            {
+                <p id="backToMain">
+                    <a class="btn btn-danger" style="margin-top:10px;margin-bottom:10px;" asp-action="Index" asp-controller="Home">Main Management Page</a>
+                </p>
+            }
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Rabant Solutions  @*<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+        </div>
+    </footer>
+
+    <script src="~/lib/MyScripts/myScript.js"></script>
+    <script src="~/lib/MyScripts/utilitiesJS.js"></script>
+    @*<script src="~/lib/MyScripts/myScript.js"></script>*@
+    <script src="~/lib/MyScripts/ManageTripJS.js"></script>
+    <script src="~/lib/MyScripts/ShippingItems.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

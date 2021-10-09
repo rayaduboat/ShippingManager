@@ -1,0 +1,134 @@
+﻿@model IEnumerable<FinanceManager.Model.Models.Expenditure>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="text-center" style="font-weight:700">All Expenditures</h3>
+<hr />
+
+<p>
+    <a class="btn btn-primary" asp-action="MainExpenditurePanel">Main Expenditure Window</a>
+</p>
+
+<div class="form-group row">
+    <label class="col-form-label col-sm-2">Search Item</label>
+    <div class="col-sm-4">
+        <input type="text" id="SearchItem" class="form-control" value="" placeholder="enter search text" style="font-weight:600;background-color:moccasin;border: solid;" />
+    @*asp-action="SenderRecipients" asp-controller="Recipients" asp-route="@Model.RecipientSender" asp-route-sender="@Model.RecipientSender"    *@
+    </div>
+    <div class="col-md-2">
+        <button class="btn-primary m-1" type="button" id="btnPrint" style="width:100%">Print</button>
+        <span id="callChargeModal" data-toggle="modal" data-target="#myChargeModal"></span>
+    </div>
+    <div class="col-md-2">
+        <button class="btn-primary m-1" type="button" id="btnEmailFile" style="width:100%">Send file</button>
+        <span id="callItemModal" data-toggle="modal" data-target="#myItemModal"></span>
+    </div>
+
+    <p id="senderId" style="display:none;"></p>
+    @*</div>*@
+</div>
+<table class="table w3-table" border="1">
+    <thead style="background-color:steelblue;text-align:center;color:white">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModeOfPayment)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.ExpenseType)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsReceiptIssued)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Batch.ActualBatch)
+                </th>*@
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="expTableBody">
+        @foreach (var item in Model)
+        {
+            <tr style="text-align:center;font-size:12px;background-color:snow">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModeOfPayment)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.ExpenseType)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.IsReceiptIssued)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Batch.ActualBatch)
+                    </td>*@
+                <td>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ExpenditureId">Edit</a> 
+                    @*<a class="btn btn-success" asp-action="Details" asp-route-id="@item.ExpenditureId">Details</a> |*@
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ExpenditureId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr />
+<p>
+    <a asp-action="Index" asp-controller="Home">Main Management Page</a>
+</p>
+
+<div>
+    @section Scripts {
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                var day = date.getDate();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
+                var formattedDate = day + '-' + month + '-' + year;
+            //Search for an item filter
+            //====================================================
+                $("#SearchItem").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("#expTableBody tr").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            //=============End of Search and Filter===============
+            });
+        </script>
+    }
+
+</div>

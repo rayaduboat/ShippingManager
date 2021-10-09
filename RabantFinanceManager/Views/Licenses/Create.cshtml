@@ -1,0 +1,79 @@
+﻿@model FinanceManager.Model.Models.License
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<h1>Create</h1>*@
+
+<h4> Create a new License</h4>
+<hr />
+<p style="color:red;font-size:12px; font-weight:600;">@ViewBag.message</p>
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row">
+                <label asp-for="LicenseNumber" class="control-label col-sm-2"></label>
+                <div class="col-sm-4">
+                    <input asp-for="LicenseNumber" class="form-control" readonly="readonly" value="@ViewBag.PreLicense" />@*disabled="disabled"*@
+                    @*<a class="btn btn-danger validateMemFormat">Create Key</a> placeholder="Don't input any value here"   *@
+                    <span asp-validation-for="LicenseNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="UserEmailAddress" class="control-label col-sm-2"></label>
+                <div class="col-sm-4">
+                    <input asp-for="UserEmailAddress" class="form-control" />
+                    <span asp-validation-for="UserEmailAddress" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label asp-for="LicenceStartDate" class="control-label col-sm-2"></label>
+                <div class="col-sm-4">
+                    <input asp-for="LicenceStartDate" class="form-control" />
+                    <span asp-validation-for="LicenceStartDate" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label asp-for="LicenceEndDate" class="control-label col-sm-2"></label>
+                <div class="col-sm-4">
+                    <input asp-for="LicenceEndDate" class="form-control" />
+                    <span asp-validation-for="LicenceEndDate" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label asp-for="NumberOfUsers" class="control-label col-sm-2"></label>
+                <div class="col-sm-4">
+                    <input asp-for="NumberOfUsers" class="form-control" />
+                    <span asp-validation-for="NumberOfUsers" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                @*<div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2">
+                            <input type="button" value="Create License" class="btn btn-primary" onclick="{new $pac.TripManagement.License().CreateLicense('UserEmailAddress','LicenceStartDate','NumberOfUsers') }" />
+                        </div>
+                        <div class="col-md-2">
+                            <input id="save" type="submit" value="Save" class="btn btn-primary" disabled="disabled" />
+                        </div>
+                    </div>*@
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <input type="submit" value="Create" class="btn btn-primary" style="width:40%;" />
+                    <a asp-action="MainLicensePanel" asp-controller="Licenses" class="btn btn-primary">Exit</a>
+                    @*onclick="{new $pac.TripManagement.ClientLink().CreateLicense('UserEmailAddress','LicenceStartDate','NumberOfUsers') }"*@
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

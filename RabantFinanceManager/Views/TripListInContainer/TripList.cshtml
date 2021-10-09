@@ -1,0 +1,214 @@
+﻿@*@model IEnumerable<FinanceManager.Model.Models.TripListInContainerModel>*@
+@model FinanceManager.Model.Models.TripListInContainerModel
+
+@{
+    ViewData["Title"] = "TripList";
+}
+
+@*<h1>TripList</h1>*@
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+
+<h3 class="text-center" style="font-weight:700">All Shipping Items in Container</h3>
+<hr />
+
+@*<p>
+        <a class="btn btn-primary" asp-action="MainRecipientsPanel">Main Recipients Window</a>
+    </p>*@
+@*<p style="color:red;font-size:12px;font-weight:600;">@Model.BachList</p>*@
+<form method="post" asp-action="TripList" asp-controller="TripListInContainer">
+    <input id="batchId" type="hidden" name="batchId" value="" />
+    <div class="form-group row">
+        <label class="col-form-label col-sm-2">Select Sender</label>
+        <div class="col-sm-3">
+            <select id="selectBatch" asp-items="@Model.BatchList" name="selectBatch" class="form-control" style="font-weight:600;background-color:moccasin;border: solid;"></select>
+        </div>
+        <div class="col-sm-2">
+            <input type="submit" id="linkSendersRecipients" class="btn-primary" value="Load Items" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" id="SearchBatch" class="form-control" value="" placeholder="enter search text" style="font-weight:600;background-color:moccasin;border: solid;" />
+        </div>
+    </div>
+</form>
+<p id="selectedBatch" style="color:red;font-weight:700;font-size:14px;text-align:center;"></p>
+
+<table id="mainTable" class="table w3-table" border="1">
+    <thead style="background-color:steelblue;text-align:center;color:white">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ActualRef)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Comment)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.GrandTotal)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Batch)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Item)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Sender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recipient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recipient.Telephone)
+            </th>
+
+            <th style="text-align:center">Action</th>
+        </tr>
+    </thead>
+    <tbody id="mainTablebody">
+        @if (Model.tripdata != null)
+        {
+            @foreach (var item in Model.tripdata)
+            {
+                <tr style="text-align:center;font-size:12px;background-color:snow">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ActualRef)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Comment)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Total)
+                    </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.GrandTotal)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.OrderDate)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Batch.ActualBatch)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Item.ItemId)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sender.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Recipient.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Recipient.Telephone)
+                    </td>
+                    <td style="text-align:center">
+                        @*<input type="hidden" name="SenderId" value="@item.TripId" />*@
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.TripId">Edit</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TripId">Delete</a>
+                    </td>
+                    @*<td>
+                            <a asp-action="Edit" asp-route-id="@item.TripId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.TripId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.TripId">Delete</a>
+                        </td>*@
+                </tr>
+            }
+        }
+        
+    </tbody>
+</table>
+<p id="err" style="color:red;font-weight:600;font-size:12px;">@ViewBag.error</p>
+
+
+<div>
+    @section Scripts {
+        <script type="text/javascript">
+            $(document).ready(function () {
+               // $('#mainTablebody').empty();
+                var b = document.getElementById('selectBatch');
+                var batchId = b.options[b.selectedIndex].value;
+                $('#batchId').val(batchId);
+
+                $("#SearchBatch").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("#mainTablebody tr").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+
+                //var listTable = document.getElementById('mainTablebody');
+                //listTable.style.display = "none";
+
+                ApplyTableFilters([
+                    {
+                        textboxID: 'SearchBatch',
+                        tbodyID: 'mainTablebody'
+                    }//,
+
+                ]
+                );
+
+                $('#selectBatch').on("change", function () {
+                    var maintablebody = document.getElementById('mainTablebody');
+                    //$('#mainTablebody').empty();
+                    var e = document.getElementById("selectBatch");
+                    var data = e.options[e.selectedIndex].text;
+                    var batchId = e.options[e.selectedIndex].value;
+                    $('#selectedBatch').text(data);
+                    $('#batchId').val(batchId);
+                });
+
+                function TableFilter(textboxID, tbodyID) {
+                    try {
+                        $("#" + textboxID).on("keyup", function () {
+                            var value = $(this).val().toLowerCase();
+                            $("#" + tbodyID + " tr").filter(function () {
+                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                            });
+                        });
+                    } catch (e) {
+
+                    }
+                }
+                function ApplyTableFilters(searchBox) {
+                    //if (typeof searchBox != 'undefined') {
+                    for (var i = 0; i < searchBox.length; i++) {
+                        try {
+                            this.TableFilter(searchBox[i].textboxID, searchBox[i].tbodyID);
+                        } catch (e) {
+
+                        }
+                    }
+                    //}
+                }
+
+            });
+        </script>
+    }
+
+</div>

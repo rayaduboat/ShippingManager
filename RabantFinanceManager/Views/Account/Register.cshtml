@@ -1,0 +1,148 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "User Registration";
+}
+<p>
+    <a class="btn btn-primary" asp-action="MainConfigPanel" asp-controller="Config">Main Admin Window</a>
+</p>
+<h2 style="text-align:center;">Create User Account</h2>
+
+<div class="container">
+    <div class="panel-group">
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="text-align:center">Fill in User Details Here</div>
+            <div class="panel-body FormDesign">
+                <form method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group row">
+                            <label asp-for="Role" class="col-form-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <select class="form-control" asp-for="Role">
+                                    <option value="value">text</option>
+                                </select>
+                                @*<input asp-for="Role" class="form-control" style="font-size:12px;" />*@
+                            </div>
+                            <span asp-validation-for="Role" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Email" class="col-form-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="Email" class="form-control" style="font-size:12px;" />
+                            </div>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Password" class="col-form-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="Password" class="form-control" style="font-size:12px;" />
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="ConfirmPassword" class="col-form-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="ConfirmPassword" class="form-control" style="font-size:12px;" />
+                            </div>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label asp-for="Title" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <select class="form-control" asp-for="Title">
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Sister">Sister</option>
+                                    <option value="Doctor">Doctor</option>
+                                    <option value="Pastor">Pastor</option>
+
+                                </select>
+                            </div>
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="FirstName" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="FirstName" class="form-control" />
+                            </div>
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="LastName" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="LastName" class="form-control" />
+                            </div>
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Gender" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <select class="form-control" asp-for="Gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="AddressLineOne" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="AddressLineOne" class="form-control" />
+                            </div>
+                            <span asp-validation-for="AddressLineOne" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="AddressLineTwo" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="AddressLineTwo" class="form-control" />
+                            </div>
+                            <span asp-validation-for="AddressLineTwo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="PostCode" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="PostCode" class="form-control" />
+                            </div>
+                            <span asp-validation-for="PostCode" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="PostTown" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <select class="form-control" asp-for="PostTown" asp-items="@Model.Town"></select>
+                            </div>
+                            <a class="btn btn-primary" asp-action="Register" asp-controller="Account">Load Towns</a>
+                            <span asp-validation-for="PostTown" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Telephone" class="col-form-label col-sm-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="Telephone" class="form-control" />
+                            </div>
+                            <span asp-validation-for="Telephone" class="text-danger"></span>
+                        @*</div>*@
+                        <div class="form-group row mt-2">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                @*<input type="submit" value="Register" class="btn btn-primary" style="width:100%;"/>*@
+                                <button class="btn btn-primary" type="submit">Register</button>
+                                <a asp-action="MainConfigPanel" asp-controller="Config" class="btn btn-primary">Exit</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @*<partial name="_ValidationScriptsPartial" />*@
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

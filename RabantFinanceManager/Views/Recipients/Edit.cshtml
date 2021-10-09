@@ -1,0 +1,121 @@
+﻿@model FinanceManager.Model.Models.RecipientEditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@*<h1>Edit</h1>*@
+
+@*<h4>Recipients</h4>*@
+<hr />
+<section>
+    <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="text-align:center;font-weight:600">Update Your Recipient details here</div>
+                <div class="panel-body">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="RecipientId" />
+                        <input type="hidden" asp-for="SenderId" />
+                        <div class="form-group row">
+                            <label asp-for="SenderId" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="SenderId" class="form-control" />
+                            </div>
+                            <span asp-validation-for="SenderId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Title" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select class="form-control" asp-for="Title">
+                                    @*asp-items="Html.GetEnumSelectList<Titles>()"*@
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Sister">Sister</option>
+                                    <option value="Doctor">Doctor</option>
+                                    <option value="Pastor">Pastor</option>
+                                    @*<option value="Mr">Mr</option>*@
+                                </select>
+                            </div>
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="FirstName" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="FirstName" class="form-control" />
+                            </div>
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="LastName" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="LastName" class="form-control" />
+                            </div>
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Gender" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select class="form-control" asp-for="Gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="AddressLineOne" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="AddressLineOne" class="form-control" />
+                            </div>
+                            <span asp-validation-for="AddressLineOne" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="AddressLineTwo" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="AddressLineTwo" class="form-control" />
+                            </div>
+                            <span asp-validation-for="AddressLineTwo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="PostTown" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select class="form-control" asp-for="PostTown" asp-items="@Model.RecipientTown"></select>
+                            </div>
+                            <span asp-validation-for="PostTown" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Telephone" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="Telephone" class="form-control" />
+                            </div>
+                            <span asp-validation-for="Telephone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <span class="col-sm-2"></span>
+                            <div class="col-sm-4">
+                                <input type="submit" value="Update" class="btn btn-primary" />
+                                <a asp-action="Index" asp-controller="Recipients" class="btn btn-primary">Exit</a>
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-primary" />
+                            </div>*@
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

@@ -1,0 +1,38 @@
+﻿@model string;
+@{
+    ViewData["Title"] = "ErrorPage";
+}
+
+<div style="margin-top:100px;text-align:center;">
+    <h2 style="font-weight:700;color:green">@ViewBag.msg</h2>
+    <hr />
+    <br />
+    <br />
+    <h4><span style="color:red;font-weight:700;">Your Email: </span>@ViewBag.Email</h4>
+    <h4><span style="color:red;font-weight:700;">Your Password: </span>@ViewBag.Password</h4>
+</div>
+@*<div class="mt-5 align-content-center">
+        <a class="btn btn-danger regButFormat" href="~/Home/LandingPage">Back to Home Page</a>
+    </div>*@
+
+<div class="mt-5 align-content-center">
+    <a class="btn btn-danger regButFormat" href="~/Home/LandingPage">Back to Home</a>
+    <a class="btn btn-danger regButFormat" href="~/Home/Index">Admin Page</a>
+    @*@if (ViewBag.AdminLogin == "info@pacoshipping.com")
+    {
+        <a class="btn btn-danger regButFormat" href="~/Home/LandingPage">Back to Home</a>
+        <a class="btn btn-danger regButFormat" href="~/Home/Index">Admin Page</a>
+    }
+    else
+    {
+        if (ViewBag.Email == null)
+        {
+            <a class="btn btn-danger regButFormat" href="~/Home/LandingPage">Back to Home</a>
+        }
+        else
+        {
+            <a class="btn btn-danger regButFormat" asp-action="Index" asp-controller="Home">Client Page</a>
+        }
+    }*@
+
+</div>

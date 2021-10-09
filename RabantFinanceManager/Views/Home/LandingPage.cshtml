@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" style="margin-top:50px; margin-bottom:30px;">
+    <h4 class="display-4" style="color:steelblue;font-weight:600;">Welcome to Paco Shipping Limited</h4>
+    <p style="font-weight:600;">(fast, safe and reliable delivery)</p>
+    @*<p>List Customers <a href="../Customer/GETCustomers">customers</a></p>*@
+    <hr />
+    <br />
+    <div>
+        <span style="color:red;font-weight:600;">If this is your first time Please register with us <a class="btn btn-primary" href="../Senders/Create"> Click here!!!</a></span>
+        @*<button class="btn save btn-primary">Save</button>
+        <button class="btn edit btn-info">Edit</button>*@
+    </div>
+</div>
+<section>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Images/BackgroundMain.png" />
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/BackgroundMain.png" />
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/BackgroundMain.png" />
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</section>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

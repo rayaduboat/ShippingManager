@@ -1,0 +1,147 @@
+﻿@model FinanceManager.Model.Models.ExpenditureCreateModel
+
+
+@{
+    ViewData["Title"] = "New Expense";
+}
+<p>
+    <a class="btn btn-primary" asp-action="MainExpenditurePanel">Main Expenditure Window</a>
+</p>
+<h3 class="text-center" style="font-weight:700;color:steelblue">Add Expenses</h3>
+<hr />
+<section>
+    <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="text-align:center">Fill in expenses details here</div>
+                <div class="panel-body FormDesign">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group row">
+                            <label asp-for="BatchId" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select asp-for="BatchId" class="form-control" asp-items="@Model.ExpBatches"></select>
+                            </div>
+                        </div>  @*ExpNameSelect*@
+                        <div class="form-group row">
+                            <label asp-for="Name" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select id="Name" asp-for="Name" asp-items="@Model.ExpNames" class="form-control"></select>
+                            </div>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                            @*<a id="fetchDescription" class="btn btn-primary" asp-controller="Expenditures" asp-action="GetDescription" asp-route-data="@Model.Name" visible="False"></a>*@
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Description" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select id="expDescription" asp-for="Description" asp-items="@Model.ItemDescription" class="form-control"></select>
+                            </div>
+
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="ModeOfPayment" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select id="ModeOfPayment" asp-for="ModeOfPayment" asp-items="@Model.ExpPayMode" class="form-control"></select>
+                            </div>
+                            @*<input asp-for="ModeOfPayment" class="form-control" />*@
+
+                            <span asp-validation-for="ModeOfPayment" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Amount" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input id="Amount" asp-for="Amount" class="form-control" />
+                            </div>
+
+                            <span asp-validation-for="Amount" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="CreatedDate" class="control-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input id="CreatedDate" asp-for="CreatedDate" type="text" placeholder="DD/MM/YYYY" class="form-control" />
+                            </div>
+                            <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                        </div>
+                        <p id="err" style="font-size:10px;color:green;font-weight:600;">@ViewBag.msg</p>
+
+                        <div class="form-group row ">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <input id="Create" type="submit" value="Create" class="btn btn-primary" />
+                                @*onclick="{new $pac.Expenditure.Record().AddExpenditure('BatchId','Name','Description','ModeOfPayment','CreatedDate','Amount') }"*@
+                                <a asp-action="MainExpenditurePanel" asp-controller="Expenditures" class="btn btn-primary">Exit</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*<p>
+    <a asp-action="Index" asp-controller="Home">Main Management Page</a>
+</p>*@
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var currentDate = new Date()
+            var day = currentDate.getDate()
+            var month = currentDate.getMonth() + 1
+            var year = currentDate.getFullYear()
+
+            //$('input[type=datetime]').datepicker({
+            //    dateFormat: "dd/M/yy",
+            //    changeMonth: true,
+            //    changeYear: true,
+            //    yearRange: "-60:+0"
+            //});
+
+            $('#CreatedDate').val(day + "/" + month + "/" + year);
+            $('#Name').on("change", function () {
+                 var e = document.getElementById("Name");
+                var data = e.options[e.selectedIndex].text;
+                var mydata = { 'data': '"' + data + '"' };
+                var ActualData = JSON.stringify(mydata);
+                $.ajax({
+                    type: 'Get',
+                    url: '@Url.Action("GetDescription","Expenditures")',
+                    data: mydata,// ActualData,
+                    dataType: 'JSON',
+                    contentType: "application/json; charset=utf-8",
+                    success: function (results) {
+                        var ExpenseDescriptions = [];
+                        ExpenseDescriptions = results;
+                        $("#expDescription option").remove();
+                        for (var i = 0; i < results.length; i++) {
+                            $('#expDescription').append('<option>' + ExpenseDescriptions[i].text + '</option>');
+                        }
+                    }
+                });
+            });
+            $('#ModeOfPayment').on("change", function () {
+                $('#Amount').focus();
+            });
+
+            $('#Description').on("change", function () {
+                $('#Amount').focus();
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/MyScripts/utilitiesJS.js"></script>
+    <script src="~/lib/MyScripts/myScript.js"></script>
+    <script src="~/lib/MyScripts/ManageTripJS.js"></script>
+    <script src="~/lib/MyScripts/PostExpenditureJS.js"></script>
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+}

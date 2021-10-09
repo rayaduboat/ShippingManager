@@ -1,0 +1,70 @@
+﻿@model FinanceManager.Model.Models.Batch
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Batch</h4>
+<hr />
+<section>
+    <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="text-align:center;font-weight:600">Update Batch details here</div>
+                <div class="panel-body">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="BatchId" />
+                        <div class="form-group row">
+                            <label asp-for="CreatedOnDate" class="control-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="CreatedOnDate" class="form-control" />
+                            </div>
+                            <span asp-validation-for="CreatedOnDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="CreatedBy" class="control-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="CreatedBy" class="form-control" />
+                            </div>
+                            <span asp-validation-for="CreatedBy" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="ShippersId" class="control-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <select asp-for="ShippersId" class="form-control" asp-items=" ViewBag.Shippers"></select>
+                            </div>
+                            <span asp-validation-for="ShippersId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="ActualBatch" class="control-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="ActualBatch" class="form-control" />
+                            </div>
+                            <span asp-validation-for="ActualBatch" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="IsSelected" class="control-label col-md-2"></label>
+                            <div class="col-md-4">
+                                <input asp-for="IsSelected" class="form-control" />
+                            </div>
+                            <span asp-validation-for="IsSelected" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div>
+    <a asp-action="MainBatchesPanel">Main Batch</a>
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

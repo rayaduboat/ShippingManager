@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabantFinanceManager", "RabantFinanceManager.csproj", "{26A40C05-E349-4575-AED2-CA97507FCD82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinanceManager.Repository", "..\FinanceManager.Repository\FinanceManager.Repository.csproj", "{7FB2FCF2-C83F-4592-9D2D-886EE65E2011}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinanceManager.Model", "..\FinanceManager.Model\FinanceManager.Model.csproj", "{AC8BF901-D388-4BC8-AE05-0C142915FFAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{31DF7C20-3CDF-40AC-AEA1-FDE42040EB00}"
+	ProjectSection(SolutionItems) = preProject
+		..\KendoPacoAdmin\global.json = ..\KendoPacoAdmin\global.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KendoPacoAdmin", "..\KendoPacoAdmin\KendoPacoAdmin.csproj", "{0E987F37-2100-432D-8E9A-6DDEB552BB6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26A40C05-E349-4575-AED2-CA97507FCD82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26A40C05-E349-4575-AED2-CA97507FCD82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26A40C05-E349-4575-AED2-CA97507FCD82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26A40C05-E349-4575-AED2-CA97507FCD82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB2FCF2-C83F-4592-9D2D-886EE65E2011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB2FCF2-C83F-4592-9D2D-886EE65E2011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB2FCF2-C83F-4592-9D2D-886EE65E2011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB2FCF2-C83F-4592-9D2D-886EE65E2011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8BF901-D388-4BC8-AE05-0C142915FFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8BF901-D388-4BC8-AE05-0C142915FFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8BF901-D388-4BC8-AE05-0C142915FFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8BF901-D388-4BC8-AE05-0C142915FFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E987F37-2100-432D-8E9A-6DDEB552BB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E987F37-2100-432D-8E9A-6DDEB552BB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E987F37-2100-432D-8E9A-6DDEB552BB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E987F37-2100-432D-8E9A-6DDEB552BB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE6AAE46-283E-42CA-B70A-C276984B7B99}
+	EndGlobalSection
+EndGlobal

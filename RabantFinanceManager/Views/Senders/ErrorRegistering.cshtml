@@ -1,0 +1,19 @@
+﻿@model string;
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "ErrorRegisteringPage";
+}
+
+<div style="margin-top:100px;text-align:center;">
+    <hr />
+    <br />
+    <br />
+    <h4><span style="color:red;font-weight:700;">Ooops!!!!</span>@Model</h4>
+    <br />
+    <h4><span style="color:red;font-weight:700;">Please Go to Home Page and Login with your login details</span> </h4>
+</div>
+<div class="mt-5 align-content-center">
+            <a class="btn btn-danger regButFormat" asp-action="Index" asp-controller="Home">Back to Home Page</a>
+</div>
+

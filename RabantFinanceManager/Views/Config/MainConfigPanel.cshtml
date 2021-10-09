@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "MainConfigPanel";
+}
+
+<h1 class="jumbotron" style="text-align:center;background-color:darkslategrey;color:white">Main Administrative Panel</h1>
+<div style="text-align:center;">
+    <a class="btn btn-success" asp-action="Customers" asp-controller="Config">Customer Link</a>
+    <a class="btn btn-success" asp-action="Register" asp-controller="Account">Create User</a>
+    <a class="btn btn-success" asp-action="Index" asp-controller="Users">View Users</a>
+    <a class="btn btn-success" asp-action="CreateRole" asp-controller="Administration">Create Role</a>
+    <a class="btn btn-success" asp-action="Index" asp-controller="Administration">View Roles</a>
+    <a class="btn btn-success" asp-action="AssignRoles" asp-controller="Administration">Assign Roles</a>
+</div>
+@*<p>
+        <a asp-action="Index" asp-controller="Home">Main Management Page</a>
+    </p>*@

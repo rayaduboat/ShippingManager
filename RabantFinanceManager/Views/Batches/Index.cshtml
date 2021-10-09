@@ -1,0 +1,58 @@
+﻿@model IEnumerable<FinanceManager.Model.Models.Batch>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a class="btn btn-primary" asp-action="MainBatchesPanel" asp-controller="Batches">Main Batches Page</a>
+</p>
+
+<h1 style="font-weight:600;text-align:center;">All Batches</h1>
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+<table class="table">
+    <thead style="background-color:steelblue;text-align:center;color:white">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOnDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActualBatch)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.IsSelected)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.Shippers)
+            </th>*@
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody style="background-color:wheat">
+        @foreach (var item in Model)
+        {
+            <tr style="text-align:center;font-size:12px;background-color:snow">
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedOnDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ActualBatch)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.BatchId">Edit</a> |
+                    @*<a asp-action="Details" asp-route-id="@item.BatchId">Details</a> |*@
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.BatchId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

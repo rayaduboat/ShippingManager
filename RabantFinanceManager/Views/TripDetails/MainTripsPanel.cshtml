@@ -1,0 +1,19 @@
+﻿
+
+@{
+    ViewData["Title"] = "MainTripsPanel";
+}
+
+<h1 class="jumbotron" style="text-align:center;background-color:steelblue;color:white">Main TripManagement Panel</h1>
+<div style="text-align:center;">
+    <a class="btn btn-primary" asp-action="Index" asp-controller="TripDetails">Show All loaded Orders</a>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="clients">Load Client Orders</a>
+    <a class="btn btn-primary" asp-action="Index" asp-controller="OrderStatus">OrderStatus</a>
+    <a class="btn btn-primary" asp-action="AdminItem" asp-controller="TripDetails">Update Invoice</a>
+    <a class="btn btn-success" asp-action="ChargeOrders" asp-controller="TripDetails">Charge Orders</a>
+</div>
+@*<p>
+    <a asp-action="Index" asp-controller="Home">Main Management Page</a>
+</p>*@
+
+

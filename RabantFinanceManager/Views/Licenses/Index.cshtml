@@ -1,0 +1,59 @@
+﻿@model IEnumerable<FinanceManager.Model.Models.License>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LicenseNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserEmailAddress)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.LicenceStartDate)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.LicenceEndDate)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfUsers)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicenseNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmailAddress)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.LicenceStartDate)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.LicenceEndDate)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfUsers)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.LicenseId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.LicenseId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.LicenseId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,706 @@
+﻿@model FinanceManager.Model.Models.SendersCreateModel
+@*@model FinanceManager.Model.Models.ConfigModel*@
+@{
+    ViewData["Title"] = "Customers";
+}
+<style>
+    .titleFormat {
+        text-align: center;
+        color: darkkhaki;
+    }
+
+    .BringToFront {
+        z-index: 30000 !important;
+    }
+
+    .textBoxFormat {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 6px 12px;
+        font-size: 16px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        /*max-width: 280px;*/
+    }
+
+    .SendertextBoxFormat {
+        display: block;
+        width: 100% !important;
+        height: 40px;
+        /*padding: 2px 10px;*/
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 4px;
+        /*max-width: 280px;*/
+    }
+
+    .chkBoxFormat {
+        display: inline-block;
+        width: 10% !important;
+        height: 40px;
+        /*padding: 5px 10px;*/
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #555;
+        /*background-color: #fff;*/
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .myH1Text {
+        color: #fff;
+        text-align: center;
+        background-color: darkslategrey;
+    }
+
+    .NewPanelColor {
+        background-color: darkslategrey !important;
+        border-color: darkslategrey !important;
+        background-image: linear-gradient(to bottom,#fff 0,darkslategrey 100%) !important;
+    }
+
+    .btnStyle {
+        background-color: darkslategrey;
+        /*width: 19em;*/
+        border-radius: 7px;
+        color: #fff;
+        height: 45px;
+    }
+
+    .reduceFont {
+        /*font-size: smaller !important;*/
+    }
+
+    .errorStyle {
+        color: red;
+        font-size: x-small;
+        margin-left: 100px;
+    }
+
+    .SendRecStyle {
+        text-decoration: underline;
+        font-size: 13px;
+        color: dodgerblue;
+        font-weight: 600;
+    }
+
+    .smallMargin {
+        padding: 20px 20px;
+        display: block;
+    }
+
+    #TabRefLarge {
+        display: block;
+    }
+
+    #DSTSenderContainer {
+        display: block !important;
+    }
+
+    #MobSenderContainer {
+        display: none !important;
+    }
+
+    #TabRef {
+        display: block !important;
+    }
+
+    #TabRefMob2 {
+        display: none !important;
+    }
+
+    #TabRefMob {
+        display: none !important;
+    }
+
+    #TabRefsenRecMob {
+        display: none;
+    }
+
+    #searchTabMob {
+        display: none;
+    }
+
+    #labelRef {
+        display: block !important;
+    }
+
+    #Save {
+        display: block;
+    }
+
+    #SaveMob {
+        display: none !important;
+    }
+
+    .llinkToClient {
+        color: blue;
+        text-decoration: underline;
+        font-size: 10px;
+    }
+
+    #customerLinkMob {
+        display: none !important;
+    }
+
+    #customerLink {
+        display: block !important;
+    }
+
+    .noShow {
+        display: none !important;
+    }
+
+    .doShow {
+        display: block !important;
+    }
+
+    .doShowClass {
+        *display: block !important;
+    }
+    /*.DTnoShow {
+            display: none !important;
+        }*/
+    #MobnoShow {
+        display: none !important;
+    }
+
+    #DTdoShow {
+        display: block !important;
+    }
+
+    #MobdoShow {
+        display: none !important;
+    }
+    /*#sectionChargeOrdersMob {
+            display:none !important;
+        }*/
+    #IDdesktop {
+        display: none !important;
+    }
+
+    #IDmob {
+        display: none !important;
+    }
+
+    @@media (max-width:767px) {
+        label {
+            display: block;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #IDmob {
+            display: block !important;
+        }
+
+        #IDdesktop {
+            display: none !important;
+        }
+        /*#sectionChargeOrdersMob {
+           display: block !important;
+        }*/
+        /*#sectionChargeOrders {
+             display:none !important;
+        }*/
+        .noShow {
+            display: none !important;
+        }
+
+        .doShow {
+            display: block !important;
+        }
+        /*#DTnoShow {
+            display: none !important;
+        }*/
+        /*.MobnoShow {
+            display: none !important;
+        }*/
+        #DTdoShow {
+            display: none !important;
+        }
+
+        #MobdoShow {
+            display: block !important;
+        }
+
+        #DSTSenderContainer {
+            display: none !important;
+        }
+
+        #MobSenderContainer {
+            display: block !important;
+        }
+
+        .form-control {
+            margin: 0 auto;
+        }
+
+        .llinkToClient {
+            color: blue;
+            text-decoration: underline;
+            font-size: 10px;
+        }
+
+        textarea {
+            display: block !important;
+            margin: 0 auto !important;
+        }
+
+        #bntLoadItem {
+            display: block !important;
+            margin: 0 auto !important;
+        }
+
+        #TxtRef {
+            display: block;
+            margin: 0 auto !important;
+            text-align: center;
+        }
+
+        #labelRef {
+            display: none !important;
+        }
+        /*#Save {
+                display: none !important;
+                margin: 10px auto !important;
+            }*/
+        #TabRef {
+            display: none !important;
+        }
+
+        #TabRefMob {
+            display: block !important;
+        }
+        /*#TabRefLarge {
+                display: none;
+            }*/
+        #TabRefMob2 {
+            display: block !important;
+        }
+
+        #TabItemsLoad {
+            font-size: 12px;
+        }
+        /*#TabRefsenRecMob {
+                display: block;
+            }*/
+        #searchTabMob {
+            display: block !important;
+        }
+
+        #customerLinkMob {
+            display: block !important;
+        }
+
+        #customerLink {
+            display: none !important;
+        }
+
+        #searchTab {
+            display: none !important;
+        }
+
+        #SaveMob {
+            display: block !important;
+        }
+    }
+</style>
+@*<h1>Customers</h1>*@
+
+<p>
+    <a asp-action="MainConfigPanel">Main Config Window</a>
+</p>
+
+<h3 class="text-center" style="font-weight:700">Create Customer Link</h3>
+<hr />
+
+<div id="IDmob">
+    <input id="checkboxCustomerLinkMob" style="color:green;font-weight:600;" class="chkBoxFormat" type="checkbox" name="name" value="Customer" onchange="{ new $pac.TripManagement.ClientLink().ShowCustomerLink('checkboxCustomerLinkMob', 'sectionCustomerLinkMob') }" />New Customer Link
+    @*<input id="checkboxCustomerLink" style="color:green;font-weight:600;" class="chkBoxFormat" type="checkbox" name="name" value="Customer" onchange="{ new $pac.TripManagement.ClientLink().ShowCustomerLink('checkboxCustomerLink', 'sectionCustomerLink') }" />Existing Customer Link*@
+</div>
+<div id="IDdesktop">
+    <input id="checkboxCustomerLink" style="color:green;font-weight:600;" class="chkBoxFormat" type="checkbox" name="name" value="Customer" onchange="{ new $pac.TripManagement.ClientLink().ShowCustomerLink('checkboxCustomerLink', 'sectionCustomerLink') }" />Customer Link
+</div>
+<p id="txtstatus">status</p>
+<section>
+
+    @*New sender Link window*@
+    <section id="NewSenderSection" class="noShow">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-md-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-success">
+                                <div class="panel panel-heading"><h4 style="text-align:center"> </h4> </div>
+                                <form asp-action="Create">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group row">
+                                        <label asp-for="ShippersId" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" asp-for="ShippersId" value="@int.Parse("4000")" />
+                                        </div>
+                                        <span asp-validation-for="ShippersId" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="Title" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control" asp-for="Title">
+                                                <option value="Mr">Mr</option>
+                                                <option value="Mrs">Mrs</option>
+                                                <option value="Miss">Miss</option>
+                                                <option value="Master">Master</option>
+                                                <option value="Brother">Brother</option>
+                                                <option value="Sister">Sister</option>
+                                                <option value="Doctor">Doctor</option>
+                                                <option value="Pastor">Pastor</option>
+
+                                            </select>
+                                        </div>
+                                        <span asp-validation-for="Title" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="FirstName" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <input asp-for="FirstName" class="form-control" />
+                                        </div>
+                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="LastName" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <input asp-for="LastName" class="form-control" />
+                                        </div>
+                                        <span asp-validation-for="LastName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="Gender" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control" asp-for="Gender">
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                        </div>
+                                        <span asp-validation-for="Gender" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="AddressLineOne" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <input asp-for="AddressLineOne" class="form-control" />
+                                        </div>
+                                        <span asp-validation-for="AddressLineOne" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="AddressLineTwo" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <input asp-for="AddressLineTwo" class="form-control" />
+                                        </div>
+                                        <span asp-validation-for="AddressLineTwo" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="PostCode" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <input asp-for="PostCode" class="form-control" />
+                                        </div>
+                                        <span asp-validation-for="PostCode" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="PostTown" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control" asp-for="PostTown" asp-items="@Model.SenderTown"></select>
+                                        </div>
+                                        <span asp-validation-for="PostTown" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="Telephone" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <input asp-for="Telephone" class="form-control" />
+                                        </div>
+                                        <span asp-validation-for="Telephone" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="EmailAddress" class="col-form-label col-sm-2"></label>
+                                        <div class="col-sm-4">
+                                            <input asp-for="EmailAddress" class="form-control" />
+                                        </div>
+                                        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <span class="col-sm-2"></span>
+                                        <div class="col-sm-4">
+                                            <input type="submit" value="Create" class="btn btn-primary" />
+                                            <a asp-action="MainSendersPanel" asp-controller="Senders" class="btn btn-primary">Exit</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </section>
+
+    @*Send Link Desktop*@
+    <section id="sectionCustomerLink" class="doShow">
+        <div class="w3-container" id="DSTSenderContainer">
+            <div style="margin-left:50%">
+                <input id="checkboxCustExist" style="color:green;font-weight:600;color:red" class="chkBoxFormat" type="checkbox" name="name" value="Customer" onchange="{ new $pac.TripManagement.ClientLink().DisableEnableFields('checkboxCustExist', 'custFirstName', 'custLastName', 'custAddress1', 'custTown', 'custPostcode', 'custTel') }" />Existing Customer
+            </div>
+
+            <table id="totTab" class="table table-responsive">
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Address1</th>
+                        <th>Town/city</th>
+                        <th>Postcode</th>
+                        <th>Telephone.</th>
+                        <th>SendToCustomer</th>
+
+                    </tr>
+                </thead>
+                <tr class="w3-light-grey" style="background-color:wheat">
+                    @*<td><input id="checkboxCustExist" style="color:green;font-weight:600;" class="chkBoxFormat" type="checkbox" name="name" value="" onchange="{ new $pac.TripManagement.ClientLink().DisableEnableFields('checkboxCustExist', 'custFirstName', 'custLastName', 'custAddress1', 'custTown', 'custPostcode', 'custTel') }" /></td>*@
+                    <td><input id="custFirstName" style="color:green;font-weight:600;" class="SendertextBoxFormat" type="text" name="name" value="" /></td>
+                    <td><input id="custLastName" style="color:green;font-weight:600;" class="SendertextBoxFormat" type="text" name="name" value="" /></td>
+                    <td><input id="custAddress1" style="color:green;font-weight:600;" class="SendertextBoxFormat" type="text" name="name" value="" /></td>
+                    <td><input id="custTown" style="color:green;font-weight:600;" class="SendertextBoxFormat" type="text" name="name" value="" /></td>
+                    <td><input id="custPostcode" style="color:green;font-weight:600;" class="SendertextBoxFormat" type="text" name="name" value="" /></td>
+                    <td><input style="color:green;font-weight:600;" id="custTel" class="SendertextBoxFormat" type="text" name="name" value="" /></td>
+
+                    <td>
+                        <input id="btnSendLink" type="submit" onclick="{ new $pac.TripManagement.ClientLink().SendToClient('checkboxCustExist', 'custFirstName', 'custLastName', 'custAddress1', 'custTown', 'custPostcode', 'custTel','customerLink','myUrlDT') }" value="Send Link" class="btn btn-primary" />
+                        <a id="customerLink" class="llinkToClient" onclick="{ new $pac.TripManagement.ClientLink().LinkCopy('customerLink') }"></a>
+                    </td>
+                    <td><textarea id="myUrlDT"></textarea></td>
+                </tr>
+            </table>
+            <br />
+        </div>
+        <p id="txtLinkToSend" style="background-color:red;color:black;font-size:11px;"></p>
+    </section>
+
+    @*Send Link Mobile*@
+    <section id="sectionCustomerLinkMob" class="noShow">
+        <div class="w3-container " id="MobSenderContainer">
+            <table id="totTab" class="w3-table w3-striped w3-bordered w3-border w3-hoverable table table-responsive">
+                <tr class="w3-light-grey">
+                    <td>Customer Already?:</td>
+                    <td><input id="checkboxCustExistMob" style="color:green;font-weight:600;" class="SendertextBoxFormat col-md-2" type="checkbox" name="name" value="" onchange="{ new $pac.TripManagement.ClientLink().DisableEnableFields('checkboxCustExistMob', 'custFirstNameMob', 'custLastNameMob', 'custAddress1Mob', 'custTownMob', 'custPostcodeMob', 'custTelMob','myUrl') }" /></td>
+                </tr>
+                <tr class="w3-light-grey">
+                    <td>FirstName:</td>
+                    <td><input id="custFirstNameMob" style="color:green;font-weight:600;" class="SendertextBoxFormat col-md-2" type="text" name="name" value="" /></td>
+                </tr>
+                <tr class="w3-light-grey">
+                    <td>LastName:</td>
+                    <td><input id="custLastNameMob" style="color:green;font-weight:600;" class="SendertextBoxFormat col-md-2" type="text" name="name" value="" /></td>
+                </tr>
+                <tr class="w3-light-grey">
+                    <td>Address1:</td>
+                    <td><input id="custAddress1Mob" style="color:green;font-weight:600;" class="SendertextBoxFormat col-md-2" type="text" name="name" value="" /></td>
+                </tr>
+                <tr class="w3-light-grey">
+                    <td>Town:</td>
+                    <td><input id="custTownMob" style="color:green;font-weight:600;" class="SendertextBoxFormat col-md-2" type="text" name="name" value="" /></td>
+                </tr>
+                <tr class="w3-light-grey">
+                    <td>Postcode:</td>
+                    <td><input id="custPostcodeMob" style="color:green;font-weight:600;" class="SendertextBoxFormat col-md-2" type="text" name="name" value="" /></td>
+                </tr>
+                <tr class="w3-light-grey">
+                    <td>Telephone:</td>
+                    <td><input style="color:green;font-weight:600;" id="custTelMob" class="SendertextBoxFormat col-md-2" type="text" name="name" value="" /></td>
+                </tr>
+                <tr class="w3-light-grey">
+
+                    <td>
+                        <input id="btnSendLinkMob" type="submit" onclick="{ new $pac.TripManagement.ClientLink().SendToClient('checkboxCustExistMob', 'custFirstNameMob', 'custLastNameMob', 'custAddress1Mob', 'custTownMob', 'custPostcodeMob', 'custTelMob','customerLinkMob','myUrl') }" value="Send Link" class="btn btn-primary" />
+                    </td>
+                    <td><textarea id="myUrl"></textarea></td>  @*style="display:none;"*@
+                    @*Send to Customer:*@
+                    <td><a id="customerLinkMob" class="llinkToClient" onclick="{new $pac.TripManagement.ClientLink().LinkCopy('customerLinkMob') }"></a></td>
+                    @*<textarea id="myUrl" style="display:none;"></textarea></td>*@
+
+                </tr>
+            </table>
+            <br />
+        </div>
+    </section>
+
+    <section id="sectionCustomerDetails" class="noShow">
+        <div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-md-10">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel panel-success">
+                                    <div class="panel panel-heading"><h4 style="text-align:center"> </h4> </div>
+                                    <form asp-action="Create">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="form-group row">
+                                            <label asp-for="ShippersId" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <input class="form-control" asp-for="ShippersId" value="@int.Parse("4000")" />
+                                            </div>
+                                            <span asp-validation-for="ShippersId" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Title" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <select class="form-control" asp-for="Title">
+                                                    <option value="Mr">Mr</option>
+                                                    <option value="Mrs">Mrs</option>
+                                                    <option value="Miss">Miss</option>
+                                                    <option value="Master">Master</option>
+                                                    <option value="Brother">Brother</option>
+                                                    <option value="Sister">Sister</option>
+                                                    <option value="Doctor">Doctor</option>
+                                                    <option value="Pastor">Pastor</option>
+
+                                                </select>
+                                            </div>
+                                            <span asp-validation-for="Title" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="FirstName" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <input asp-for="FirstName" class="form-control" />
+                                            </div>
+                                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="LastName" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <input asp-for="LastName" class="form-control" />
+                                            </div>
+                                            <span asp-validation-for="LastName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Gender" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <select class="form-control" asp-for="Gender">
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                </select>
+                                            </div>
+                                            <span asp-validation-for="Gender" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="AddressLineOne" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <input asp-for="AddressLineOne" class="form-control" />
+                                            </div>
+                                            <span asp-validation-for="AddressLineOne" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="AddressLineTwo" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <input asp-for="AddressLineTwo" class="form-control" />
+                                            </div>
+                                            <span asp-validation-for="AddressLineTwo" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="PostCode" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <input asp-for="PostCode" class="form-control" />
+                                            </div>
+                                            <span asp-validation-for="PostCode" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="PostTown" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <select class="form-control" asp-for="PostTown" asp-items="@Model.UkTown"></select>
+                                            </div>
+                                            <span asp-validation-for="PostTown" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Telephone" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <input asp-for="Telephone" class="form-control" />
+                                            </div>
+                                            <span asp-validation-for="Telephone" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="EmailAddress" class="col-form-label col-sm-2"></label>
+                                            <div class="col-sm-4">
+                                                <input asp-for="EmailAddress" class="form-control" />
+                                            </div>
+                                            <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group row">
+                                            <span class="col-sm-2"></span>
+                                            <div class="col-sm-4">
+                                                <input type="submit" value="Create" class="btn btn-primary" />
+                                                <a asp-action="MainSendersPanel" asp-controller="Senders" class="btn btn-primary">Exit</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </section>
+</section>
+
+@section scripts {
+    <script type="text/javascript">
+
+                //$(document).ready(function () {
+                //    $('#pageRefresh').click(function () {
+                //        window.location.reload();
+                //    });
+                //    $('#checkboxCustomerLinkMob').change(function () {
+                //        var isChecked = document.getElementById('checkboxCustomerLinkMob');
+                //        if (isChecked.checked) {
+                //            alert("Hi there");
+                //            $('#sectionCustomerLinkMob').addClass("doShow");
+                //        }
+                //        else {
+                //            //$('#sectionCustomerLinkMob').addClass("noShow");
+                //            //var myCheckBox = document.getElementById('checkboxCustomerLinkMob');
+                //            //myCheckBox.hid
+                //            $('#sectionCustomerLinkMob').hide();
+                //        }
+                //    });
+                //    function CreateCustomerLink() {
+                //        if (document.getElementById('checkboxCustomerLink').checked) {
+                //            $('#sectionCustomerLink').addClass("doShow");
+                //            //$('#sectionCustomerLinkMob').addClass("noShow");
+                //        }
+                //        else {
+                //            $('#sectionCustomerLink').addClass("noShow");
+                //            //$('#sectionCustomerLinkMob').addClass("doShow");
+                //        }
+                //    }
+                //});
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/MyScripts/utilitiesJS.js"></script>
+    <script src="~/lib/MyScripts/myScript.js"></script>
+    <script src="~/lib/MyScripts/ManageTripJS.js"></script>
+}

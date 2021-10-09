@@ -1,0 +1,132 @@
+﻿@model IEnumerable<FinanceManager.Model.Models.Items>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="text-center" style="font-weight:700;color:steelblue">All Shipping Items</h3>
+<hr />
+
+<p>
+    <a class="btn btn-primary" asp-action="MainItemsPanel">Main Shipping Items Window</a>
+</p>
+
+<form method="post" asp-action="SenderRecipients" asp-controller="Recipients">
+    <div class="form-group row">
+        <label class="col-form-label col-sm-2">Search Item</label>
+        <div class="col-sm-4">
+            <input type="text" id="SearchSender" class="form-control" value="" placeholder="enter search text" />@*asp-action="SenderRecipients" asp-controller="Recipients" asp-route="@Model.RecipientSender" asp-route-sender="@Model.RecipientSender"    *@
+        </div>
+    </div>
+</form>
+
+<table class="table w3-table" border="1">
+    <thead style="background-color:steelblue;text-align:center;color:white">
+        <tr style="text-align:center;">
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colour)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.UnitCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specifications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Condition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Make)
+            </th>*@
+            <th style="text-align:center">Action</th>
+        </tr>
+    </thead>
+    <tbody id="tabBodyItems">
+        @foreach (var item in Model)
+        {
+            <tr style="text-align:center;font-size:12px;background-color:snow">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colour)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.UnitCost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Specifications)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Condition)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Make)
+                </td>*@
+                <td style="text-align:center">
+                    <a asp-action="Edit" asp-route-id="@item.ItemId">Edit</a> |
+                    @*<a asp-action="Details" asp-route-id="@item.ItemId">Details</a> |*@
+                    <a asp-action="Delete" asp-route-id="@item.ItemId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#SearchSender").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#tabBodyItems tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+
+            function TableFilter(textboxID, tbodyID) {
+                if (typeof textboxID != 'undefined' && typeof tbodyID != 'undefined') {
+                    try {
+                        $("#" + textboxID).on("keyup", function () {
+                            var value = $(this).val().toLowerCase();
+                            $("#" + tbodyID + " tr").filter(function () {
+                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                            });
+                        });
+                    } catch (e) {
+
+                    }
+                }
+            }
+        });
+
+    </script>
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>

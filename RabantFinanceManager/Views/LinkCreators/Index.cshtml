@@ -1,0 +1,167 @@
+﻿@*@model IEnumerable<FinanceManager.Model.Models.LinkCreator>*@
+@model IEnumerable<FinanceManager.Model.Models.OrderStatusModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .textBoxFormatOrders {
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        padding: 6px 12px;
+        font-size: 16px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        /*max-width: 280px;*/
+    }
+
+    .SendertextBoxFormat {
+        display: block;
+        width: 100% !important;
+        height: 40px;
+        /*padding: 2px 10px;*/
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 4px;
+        /*max-width: 280px;*/
+    }
+
+    .chkBoxFormat {
+        display: inline-block;
+        width: 10% !important;
+        height: 40px;
+        /*padding: 5px 10px;*/
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #555;
+        /*background-color: #fff;*/
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+<p>
+    <a class="btn btn-primary" asp-action="Index" asp-controller="Home">Main Panel</a>
+</p>
+
+
+<h3 style="text-align:center;font-weight:600;color:steelblue">All Orders</h3>
+<hr />
+<input id="txtBatchId" type="hidden" name="name" value="" />
+<div class="form-group row">
+    <div class="col-sm-8">
+        <label class="col-form-label col-sm-2">SearchItem</label>
+        <input class="textBoxFormatOrders col-sm-3" type="text" id="SearchItem" value="" placeholder="enter search text" />
+        <label class="col-form-label col-sm-2">All Batches</label>
+        <input id="checkAllBatches" class="chkBoxFormat col-sm-1" type="checkbox" name="name" style="font-size:14px" onchange="{ new $pac.TripManagement.ClientOrder().UpdatAllBatchesVisible('checkAllBatches','batchUpdate') }" />@*All Batches*@
+    </div>
+    <div id="batchUpdate" class="col-sm-4" style="display:none;">
+        <select id="seletBatch" class="textBoxFormatOrders col-sm-4">
+            <option value="0">Loaded</option>
+            <option value="1">Created</option>
+            <option value="2">Charged</option>
+            <option value="3">Picked</option>
+            <option value="4">Shipped</option>
+            <option value="5">In Ghana</option>
+            <option value="6">Delivered</option>
+        </select>
+        <input type="button" name="name" value="UpdateStatus" class="m-1" onclick="{new $pac.TripManagement.ClientOrder().UpdateAllTrips('checkAllBatches','batchUpdate') }" />
+    </div>
+</div>
+<div class="table-responsive">
+    <table id="mainTableStatus" class="table table-hover" border="1">
+        <thead style="background-color:steelblue;text-align:center;color:white">
+            <tr>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Date)
+                    </th>*@
+                @*<th>
+                        @Html.DisplayNameFor(model => model.SenderId)
+                    </th>*@
+                @*<th>
+                        @Html.DisplayNameFor(model => model.BatchId)
+                    </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.RefNum)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.UrlLink)
+                    </th>*@
+                @*<th>
+                        @Html.DisplayNameFor(model => model.UniqueString)
+                    </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LinkStatus)
+                </th>
+                <th style="text-align:center;">Action</th>
+            </tr>
+        </thead>
+        <tbody id="itemTableBody" style="text-align:center;">
+            @foreach (var item in Model)
+            {
+                <tr style="text-align:center;font-size:12px;background-color:snow">
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.SenderId)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.BatchId)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RefNum)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.UrlLink)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.UniqueString)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.oStatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.lStatus)
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Update Status</a> |
+                        @*<a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#SearchItem").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#itemTableBody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

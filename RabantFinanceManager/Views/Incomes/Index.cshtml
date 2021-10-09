@@ -1,0 +1,59 @@
+﻿@model IEnumerable<FinanceManager.Model.Models.Income>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="MainFinancePanel" asp-controller="Config">Main Finance Window</a>
+</p>
+<table class="table w3-table" border="1">
+    <thead style="background-color:steelblue;text-align:center;color:white">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ActualRef)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModeOfPayment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Batch)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr style="text-align:center;font-size:12px;background-color:snow">
+            <td>
+                @Html.DisplayFor(modelItem => item.ActualRef)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModeOfPayment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Batch.ActualBatch)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IncomeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IncomeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IncomeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

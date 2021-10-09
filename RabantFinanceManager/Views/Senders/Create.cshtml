@@ -1,0 +1,142 @@
+﻿@model FinanceManager.Model.Models.SendersCreateModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3 class="text-center" style="font-weight:700;color:steelblue">Register as a Customer</h3>
+<hr />
+
+
+<section>
+    <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="text-align:center">Fill in your details here</div>
+                <div class="panel-body FormDesign">
+                    <form asp-action="Create" style="padding-left:30px;">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" class="form-control" asp-for="ShippersId" value="@Model.ShippersId" />@*@int.Parse("4004")"*@
+                        <div class="form-group row">
+                            <label asp-for="Title" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select class="form-control" asp-for="Title">
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Sister">Sister</option>
+                                    <option value="Doctor">Doctor</option>
+                                    <option value="Pastor">Pastor</option>
+
+                                </select>
+                            </div>
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="FirstName" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="FirstName" class="form-control" />
+                            </div>
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="LastName" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="LastName" class="form-control" />
+                            </div>
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Gender" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select class="form-control" asp-for="Gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="AddressLineOne" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="AddressLineOne" class="form-control" />
+                            </div>
+                            <span asp-validation-for="AddressLineOne" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="AddressLineTwo" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="AddressLineTwo" class="form-control" />
+                            </div>
+                            <span asp-validation-for="AddressLineTwo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="PostCode" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="PostCode" class="form-control" />
+                            </div>
+                            <span asp-validation-for="PostCode" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="PostTown" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <select class="form-control" asp-for="PostTown" asp-items="@Model.SenderTown"></select>
+                            </div>
+                            <a class="btn btn-primary" asp-action="Create" asp-controller="Senders">Refresh</a>
+                            <span asp-validation-for="PostTown" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Telephone" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="Telephone" class="form-control" />
+                            </div>
+                            <span asp-validation-for="Telephone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="EmailAddress" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="EmailAddress" class="form-control" />
+                            </div>
+                            <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Password" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="Password" class="form-control" />
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="ConfirmPassword" class="col-form-label col-sm-2"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="ConfirmPassword" class="form-control" />
+                            </div>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                        <div class="form-group row">
+                            <span class="col-sm-2"></span>
+                            <div class="col-sm-4">
+                                <input type="submit" value="Register" class="btn btn-primary" />
+                                @if (User.Identity.Name == "info@pacoshipping.com")
+                                {
+                                    <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Exit</a>
+                                }
+                                else
+                                {
+                                    <a asp-action="LandingPage" asp-controller="Home" class="btn btn-primary">Exit</a>
+                                }
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
